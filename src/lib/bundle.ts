@@ -1,26 +1,37 @@
-class Bundle {
-  id: string;
-  name: string;
-  //code: number;
+
+
+export class BundleOverview {
+  bundle_id: string;
+  title: string;
   description?: string;
+  image_url?: string;
+
+  constructor(bundle_id: string, title: string, description?: string, image_url?: string) {
+    this.bundle_id = bundle_id;
+    this.title = title;
+    this.description = description;
+    this.image_url = image_url;
+  }
+}
+
+export class Bundle {
+  overview: BundleOverview;
+  //code: number;
   instructions?: string;
   items: BundleItem[];
 
-  constructor(id: string, name: string, description: string, instructions: string, items: BundleItem[]) {
-    this.id = id;
-    this.name = name;
-    this.description = description;
-    this.instructions = instructions;
+  constructor(overview: BundleOverview, items: BundleItem[]) {
+    this.overview = overview;
     this.items = items;
   }
 }
 
 
-class BundleItem {
+export class BundleItem {
   quantity: number;
   product: Product;
 
-  constructor(product: Product, quantity: number) {
+  constructor(product: Product, quantity: number = 1) {
     this.product = product;
     this.quantity = quantity;
   }
@@ -28,7 +39,7 @@ class BundleItem {
 
 
 //start/end date of discount
-class Product {
+export class Product {
   name: string;
   basePrice: number;
   price: number;
