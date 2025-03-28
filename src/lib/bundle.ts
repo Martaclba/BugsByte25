@@ -1,12 +1,14 @@
 class Bundle {
   id: string;
+  name: string;
   //code: number;
   description?: string;
   instructions?: string;
   items: BundleItem[];
 
-  constructor(id: string, description: string, instructions: string, items: BundleItem[]) {
+  constructor(id: string, name: string, description: string, instructions: string, items: BundleItem[]) {
     this.id = id;
+    this.name = name;
     this.description = description;
     this.instructions = instructions;
     this.items = items;
