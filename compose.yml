@@ -1,0 +1,13 @@
+services:
+  ai_service:
+    build: .
+    ports:
+      - "5000:5000"
+    # networks:
+    #   - front-tier
+    #   - back-tier
+    profiles: [ dev, prod ]
+
+# networks:
+#   front-tier: {}
+#   back-tier: {}
