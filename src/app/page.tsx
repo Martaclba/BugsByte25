@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-full bg-white min-h-screen">
-      <div className="flex flex-row w-full justify-between items-center py-6 bg-red-500 px-4 relative">
+      <div className="flex flex-row w-full justify-between items-center py-6 bg-red-500 px-4 md:px-40 relative">
         <div className="flex flex-row items-center gap-2">
           <Image src="/logo.png" alt="logo" width={40} height={40} className="bg-white p-1 rounded-full"/>
           <p className="text-white font-extrabold text-2xl">Bundly</p>
@@ -52,7 +52,7 @@ export default function Home() {
             <input 
               type="text" 
               placeholder="" 
-              className="px-2 py-0.5 bg-white rounded-lg text-xs text-black focus:outline-none placeholder:text-black w-40"
+              className="px-2 py-0.5 md:px-4 md:py-1 bg-white rounded-lg text-xs text-black focus:outline-none placeholder:text-black w-40 md:w-96"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
@@ -70,9 +70,9 @@ export default function Home() {
         </div>
       </div>
       
-      <div className="flex flex-col gap-3 h-max px-4 mt-4">
+      <div className="flex flex-col gap-3 h-max md:px-[500px] px-4 mt-4 items-center justify-center">
         {filteredBundles.map((b: BundleOverview) => (
-          <div key={b.bundle_id} className="text-black shadow py-2 px-4 rounded-lg flex flex-row gap-4 w-full relative h-full">
+          <div key={b.bundle_id} className="text-black shadow border border-black/5 py-2 px-4 rounded-lg flex flex-row gap-4 w-full relative h-full">
             <div className="absolute h-full w-1.5 bg-red-600 left-0 top-0 rounded-l-lg"></div>
             
             <Image 
@@ -104,7 +104,7 @@ export default function Home() {
           <div className="border-t border-black/20 py-2 flex flex-row justify-end items-center gap-2">
             <p className="text-black text-xs">Made with love</p>
             <p className="text-black text-xs">©</p>
-            <Image src="/wiwiwi.png" alt="Ver receita" width={32} height={32}/>
+            <a href="https://www.youtube.com/watch?v=CXEIsUPpeI4&t=732s"><Image src="/wiwiwi.png" alt="Ver receita" width={32} height={32} className="cursor-pointer"/></a>
           </div>
       </div>
     </div>
