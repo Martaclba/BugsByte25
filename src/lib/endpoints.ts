@@ -51,12 +51,12 @@ export async function get_bundle(
   bundle_id: string
 ): Promise<Bundle> {
   return new Bundle(
-    new BundleOverview("12345", "Arroz de Tomate", "yummy", "uwu"),
+    new BundleOverview("12345", "Arroz de Tomate", "O arroz de tomate é um prato típico português, cremoso e aromático, feito com arroz cozido em molho de tomate temperado.", "asd"),
     [
-      new BundleItem(new Product("tomate", 1.01, 1.01), 2),
-      new BundleItem(new Product("arroz", 2.01, 2.01)),
-      new BundleItem(new Product("cebola", 2.01, 1.99)),
-      new BundleItem(new Product("alho", 0.49, 0.49)),
+      new BundleItem(new Product("1", "tomate", 1.01, 1.01), 2),
+      new BundleItem(new Product("2", "arroz", 2.01, 2.01)),
+      new BundleItem(new Product("3", "cebola", 2.01, 1.99)),
+      new BundleItem(new Product("4", "alho", 0.49, 0.49)),
     ]
   );
 }
