@@ -1,11 +1,19 @@
 import { Bundle, BundleItem, BundleOverview, Product } from "./bundle";
 import { User } from "./user";
 
-export async function get_user(id: string): Promise<User> {
+export async function get_user(username: string): Promise<User> {
+  let response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/users/${username}`);
+  let data = await response.json();
+  return data as User;
+  
   return new User("Joaquim", "joaquim01");
 }
 
-export async function get_bundles(user_id: string): Promise<BundleOverview[]> {
+export async function get_bundles(username: string): Promise<BundleOverview[]> {
+  let response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/users/${username}/bundles`, );
+  let data = await response.json();
+  return data.bundles as BundleOverview[];
+
   return [
     new BundleOverview(
       "12345",
@@ -47,9 +55,13 @@ export async function get_bundles(user_id: string): Promise<BundleOverview[]> {
 }
 
 export async function get_bundle(
-  user_id: string,
+  username: string,
   bundle_id: string
 ): Promise<Bundle> {
+  let response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/users/${username}/bundles/${bundle_id}`);
+  let data = await response.json();
+  return data as Bundle;
+
   return new Bundle(
     new BundleOverview("12345", "Arroz de Tomate", "O arroz de tomate é um prato típico português, cremoso e aromático, feito com arroz cozido em molho de tomate temperado.", "asd"),
     [

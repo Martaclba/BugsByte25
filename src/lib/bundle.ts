@@ -15,13 +15,19 @@ export class BundleOverview {
 }
 
 export class Bundle {
-  overview: BundleOverview;
+  bundle_id: string;
+  title: string;
+  description?: string;
+  image_url?: string;
   //code: number;
   instructions?: string;
   items: BundleItem[];
 
   constructor(overview: BundleOverview, items: BundleItem[]) {
-    this.overview = overview;
+    this.bundle_id = overview.bundle_id;
+    this.title = overview.title;
+    this.description = overview.description;
+    this.image_url = overview.image_url;
     this.items = items;
   }
 }
@@ -44,13 +50,13 @@ export class Product {
   name: string;
   basePrice: number;
   price: number;
-  image?: string;
+  image_url?: string;
 
-  constructor(product_id: string, name: string, basePrice: number, price: number, image?: string) {
+  constructor(product_id: string, name: string, basePrice: number, price: number, image_url?: string) {
     this.product_id = product_id;
     this.name = name;
     this.price = price;
     this.basePrice = basePrice;
-    this.image = image;
+    this.image_url = image_url;
   }
 }

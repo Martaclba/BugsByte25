@@ -1,6 +1,6 @@
 "use client"
 
-import { Bundle, Product } from "@/lib/bundle"
+import { Bundle, BundleItem, Product } from "@/lib/bundle"
 import { get_bundle } from "@/lib/endpoints";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react"
@@ -45,7 +45,7 @@ export default function BundlePage({params} : { params: Promise<{ bundle_id: str
       <div className="absolute top-0 left-0 bg-red-600 w-full h-1.5 rounded-t-lg"></div>
 
       <div className="flex flex-row w-full justify-between items-center py-2">
-        <div className="text-black/70 text-2xl">{bundle?.overview.title}</div>
+        <div className="text-black/70 text-2xl">{bundle?.title}</div>
         {/*<input type="checkbox"/>*/}
       </div>
       
@@ -57,15 +57,15 @@ export default function BundlePage({params} : { params: Promise<{ bundle_id: str
         height={100}
       />
 
-      <p className="text-black/50 text-md text-justify">{bundle?.overview.description}</p>
+      <p className="text-black/50 text-md text-justify">{bundle?.description}</p>
 
       <table className="table-fixed border-separate border-spacing-y-3">
         <tbody>
-          {bundle?.items.map((i) =>
+          {bundle?.items.map((i: BundleItem) =>
             <tr key={i.product.product_id}>
               <td className="w-20">
-                <div className="rounded relative w-3/4 h-14 bg-black">
-                  <Image src="/receita.jpg" alt="<?>" fill objectFit="cover"/>
+                <div className="rounded relative w-3/4 h-14">
+                  <Image src={i?.product.image_url ?? "/image-missing.svg"} alt="<?>" fill objectFit="cover"/>
                 </div>
               </td>
               <td className="w-8">{i.quantity}x</td>
@@ -80,7 +80,7 @@ export default function BundlePage({params} : { params: Promise<{ bundle_id: str
       
       <p className="text-black/50 text-sm text-justify">{bundle?.instructions}</p>
 
-      <p className="mx-auto">Código: {bundle?.overview.bundle_id}</p>
+      <p className="mx-auto">Código: {bundle?.bundle_id}</p>
       <div className="flex flex-row w-full justify-center items-center py-2">
         <button onClick={() => console.log("ola")} className="cursor-pointer flex rounded-full p-3 mx-4 items-center justify-center bg-gray-300">
           <Image src="/like.svg" alt="like" width={40} height={40}/>

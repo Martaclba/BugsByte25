@@ -39,6 +39,7 @@ export default function Home() {
     return null;
   }
 
+  console.log(bundles);
   const filteredBundles = bundles.filter((b) => 
     b.title.toLowerCase().includes(search.toLowerCase())
   );
