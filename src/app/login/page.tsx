@@ -9,8 +9,10 @@ export default function Login() {
     const router = useRouter();
 
     const handleLogin = () => {
-        localStorage.setItem("username", username);
-        router.push("/");
+        if(username){
+            localStorage.setItem("username", username);
+            router.push("/");
+        }
     };
 
     return (
@@ -22,18 +24,18 @@ export default function Login() {
                 </div>             
                 <input 
                     type="text" 
-                    className="px-2 py-0.5 border border-black/5 shadow rounded text-sm text-black focus:outline-none placeholder:text-black/40 w-full" 
+                    className="px-4 py-2 border border-black/5 shadow rounded-lg text-black focus:outline-none placeholder:text-black/40 w-full" 
                     placeholder="Username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                 />
                 <input 
                     type="password" 
-                    className="px-2 py-0.5 border border-black/5 shadow rounded text-sm text-black focus:outline-none placeholder:text-black/40 w-full" 
+                    className="px-4 py-2 border border-black/5 shadow rounded-lg text-black focus:outline-none placeholder:text-black/40 w-full" 
                     placeholder="Password"
                 />
                 <button 
-                    className="px-2 py-0.5 text-white bg-red-500 font-bold rounded w-full cursor-pointer"
+                    className="px-2 py-0.5 text-white bg-[#eb0203] font-bold rounded-lg w-full cursor-pointer"
                     onClick={handleLogin}
                 >
                     Login

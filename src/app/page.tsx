@@ -39,14 +39,13 @@ export default function Home() {
     return null;
   }
 
-  console.log(bundles);
   const filteredBundles = bundles.filter((b) => 
     b.title.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
     <div className="flex flex-col w-full bg-white min-h-screen">
-      <div className="flex flex-row w-full justify-between items-center py-6 bg-red-500 px-4 md:px-40 relative">
+      <div className="flex flex-row w-full justify-between items-center py-6 bg-[#eb0203] rounded-br-[30%] px-4 md:px-40 relative">
         <div className="flex flex-row items-center gap-2">
           <Image src="/logo.png" alt="logo" width={40} height={40} className="bg-white p-1 rounded-full"/>
           <p className="text-white font-extrabold text-2xl">Bundly</p>
@@ -70,14 +69,14 @@ export default function Home() {
             className="cursor-pointer"
             onClick={() => setShowSearch(!showSearch)}
           />
-          <a href={`/login`}><Image src="/person.svg" alt="profile" width={23} height={23}/></a>
+          <a href={`/login`}><Image src="/person.svg" alt="profile" width={23} height={23}/></a>        
         </div>
       </div>
-      
-      <div className="flex flex-col gap-3 h-max md:px-[500px] px-4 mt-4 items-center justify-center">
+      <div className="px-4 mt-2 text-xl text-black/70"> Olá, {user_id} 👋</div>
+      <div className="flex flex-col gap-3 h-max md:px-[500px] px-4 mt-2 items-center justify-center">
         {filteredBundles.map((b: BundleOverview) => (
           <div key={b.bundle_id} className="text-black shadow border border-black/5 py-2 px-4 rounded-lg flex flex-row gap-4 w-full relative h-full">
-            <div className="absolute h-full w-1.5 bg-red-600 left-0 top-0 rounded-l-lg"></div>
+            <div className="absolute h-full w-1.5 bg-[#eb0203] left-0 top-0 rounded-l-lg"></div>
             
             <Image 
               src="/receita.jpg" 
@@ -104,7 +103,9 @@ export default function Home() {
           </div>
         ))}
       </div>
+      <div className="px-4">
       <Footer/>
+      </div>
     </div>
   );
 }
