@@ -9,13 +9,13 @@ export async function get_bundles(user_id: string): Promise<BundleOverview[]> {
   return [
     new BundleOverview(
       "12345",
-      "Arroz de Tomate",
+      "Picanha",
       "O arroz de tomate é um prato típico português, cremoso e aromático, feito com arroz cozido em molho de tomate temperado.",
       "asd"
     ),
     new BundleOverview(
       "12346",
-      "Arroz de Tomate",
+      "Arroz",
       "O arroz de tomate é um prato típico português, cremoso e aromático, feito com arroz cozido em molho de tomate temperado.",
       "asd"
     ),
@@ -27,19 +27,19 @@ export async function get_bundles(user_id: string): Promise<BundleOverview[]> {
     ),
     new BundleOverview(
       "12348",
-      "Arroz de Tomate",
+      "Feijao",
       "O arroz de tomate é um prato típico português, cremoso e aromático, feito com arroz cozido em molho de tomate temperado.",
       "asd"
     ),
     new BundleOverview(
       "12349",
-      "Arroz de Tomate",
+      "Frango Churrasco",
       "O arroz de tomate é um prato típico português, cremoso e aromático, feito com arroz cozido em molho de tomate temperado.",
       "asd"
     ),
     new BundleOverview(
       "12340",
-      "Arroz de Tomate",
+      "Pernil",
       "O arroz de tomate é um prato típico português, cremoso e aromático, feito com arroz cozido em molho de tomate temperado.",
       "asd"
     ),
