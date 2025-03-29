@@ -41,7 +41,7 @@ def setup_db(conn, cleanup=False):
         # Create bundles table
         cur.execute("""
         CREATE TABLE IF NOT EXISTS bundles (
-            bundle_id INT AUTO_INCREMENT PRIMARY KEY,
+            bundle_id INT PRIMARY KEY,
             name VARCHAR(128),
             description VARCHAR(256),
             instructions TEXT,
@@ -53,7 +53,7 @@ def setup_db(conn, cleanup=False):
         # Create items table
         cur.execute("""
         CREATE TABLE IF NOT EXISTS items (
-            item_id INT AUTO_INCREMENT PRIMARY KEY,
+            item_id INT PRIMARY KEY,
             name VARCHAR(64),
             image_url VARCHAR(256)
         )
@@ -68,8 +68,6 @@ def setup_db(conn, cleanup=False):
             quantity INT
         )
         """)
-        # FOREIGN KEY item_id(item_id) REFERENCES items(item_id),
-        # FOREIGN KEY bundle_id(bundle_id) REFERENCES bundles(bundle_id)
         print("Created bundle items table")
     return conn
 
