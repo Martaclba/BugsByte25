@@ -40,12 +40,14 @@ export class BundleItem {
 
 //start/end date of discount
 export class Product {
+  product_id: string;
   name: string;
   basePrice: number;
   price: number;
   image?: string;
 
-  constructor(name: string, basePrice: number, price: number, image?: string) {
+  constructor(product_id: string, name: string, basePrice: number, price: number, image?: string) {
+    this.product_id = product_id;
     this.name = name;
     this.price = price;
     this.basePrice = basePrice;
