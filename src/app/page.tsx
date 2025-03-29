@@ -72,8 +72,8 @@ export default function Home() {
           <a href={`/login`}><Image src="/person.svg" alt="profile" width={23} height={23}/></a>        
         </div>
       </div>
-      <div className="px-4 mt-2 text-xl text-black/70"> Olá, {user_id} 👋</div>
-      <div className="flex flex-col gap-3 h-max md:px-[500px] px-4 mt-2 items-center justify-center">
+      <div className="px-4 mt-6 text-xl text-black/80"> Olá, {user_id} 👋</div>
+      <div className="flex flex-col gap-3 h-max md:px-[500px] px-4 mt-6 items-center justify-center">
         {filteredBundles.map((b: BundleOverview) => (
           <div key={b.bundle_id} className="text-black shadow border border-black/5 py-2 px-4 rounded-lg flex flex-row gap-4 w-full relative h-full">
             <div className="absolute h-full w-1.5 bg-[#eb0203] left-0 top-0 rounded-l-lg"></div>
@@ -103,7 +103,7 @@ export default function Home() {
           </div>
         ))}
       </div>
-      <div className="px-4">
+      <div className="px-4 mt-auto">
       <Footer/>
       </div>
     </div>
