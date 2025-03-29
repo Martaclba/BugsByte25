@@ -1,17 +1,17 @@
 export class BundleOverview {
   bundle_id: string;
-  title: string;
+  name: string;
   description?: string;
   image_url?: string;
 
   constructor(
     bundle_id: string,
-    title: string,
+    name: string,
     description?: string,
     image_url?: string
   ) {
     this.bundle_id = bundle_id;
-    this.title = title;
+    this.name = name;
     this.description = description;
     this.image_url = image_url;
   }
@@ -19,16 +19,16 @@ export class BundleOverview {
 
 export class Bundle {
   bundle_id: string;
-  title: string;
+  name: string;
   description?: string;
   image_url?: string;
   //code: number;
   instructions?: string;
   items: BundleItem[];
 
-  constructor(overview: BundleOverview, instructions?: string, items: BundleItem[]) {
+  constructor(overview: BundleOverview, items: BundleItem[], instructions?: string) {
     this.bundle_id = overview.bundle_id;
-    this.title = overview.title;
+    this.name = overview.name;
     this.description = overview.description;
     this.image_url = overview.image_url;
     this.instructions = instructions;

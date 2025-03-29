@@ -37,7 +37,7 @@ export default function BundlePage({params} : { params: Promise<{ bundle_id: str
   useEffect(() => {
       const fetchBundle = async () => setBundle(await get_bundle("1234", bundle_id));
       fetchBundle();
-    }, []);
+    }, [bundle_id]);
 
   return <div className="flex flex-col w-full bg-white min-h-screen p-4">
     <button onClick={() => router.back()} className="cursor-pointer w-fit">
@@ -54,15 +54,15 @@ export default function BundlePage({params} : { params: Promise<{ bundle_id: str
       <div className="absolute top-0 left-0 bg-[#eb0203] w-full h-1.5 rounded-t-lg"></div>
 
       <div className="flex flex-row w-full justify-between items-center py-2">
-        <div className="text-black/70 text-2xl">{bundle?.title}</div>
+        <div className="text-black/70 text-2xl">{bundle?.name}</div>
       </div>
       
       <Image
         src={"/receita.jpg"}
         alt="receita"
         className="w-2/3 rounded-lg mx-auto"
-        width={100}
-        height={100}
+        width={128}
+        height={128}
       />
 
       <p className="text-black/50 text-justify">{bundle?.description}</p>

@@ -40,7 +40,7 @@ export default function Home() {
   }
 
   const filteredBundles = bundles.filter((b) => 
-    b.title.toLowerCase().includes(search.toLowerCase())
+    b.name.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -78,17 +78,17 @@ export default function Home() {
           <div key={b.bundle_id} className="text-black shadow border border-black/5 py-2 px-4 rounded-lg flex flex-row gap-4 w-full relative h-full">
             <div className="absolute h-full w-1.5 bg-[#eb0203] left-0 top-0 rounded-l-lg"></div>
             
-            <Image 
-              src="/receita.jpg" 
-              alt="receita" 
-              className="w-1/3 h-32 rounded-lg ml-1" 
-              width={32} 
-              height={32} 
-            />
+            <div className="w-1/3 h-32 rounded-lg ml-1 my-auto relative">
+              <Image 
+                src={b.image_url ?? "/image-missing.svg"} 
+                alt="receita"
+                fill objectFit="cover"
+              />
+            </div>
             
             <div className="flex flex-col w-2/3 h-full">
               <div className="flex flex-row justify-between items-center">
-                <p>{b.title}</p>
+                <p>{b.name}</p>
               </div>
               <div className="text-black/50 text-xs text-justify">{b.description}</div>
               <div className="flex justify-end mt-4 text-white w-full text-sm" >
