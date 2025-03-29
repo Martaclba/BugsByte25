@@ -1,5 +1,8 @@
 import singlestoredb as s2
 
+# DB_NAME = "db_marta_abaa0"
+# SINGLESTOREDB_URL = "marta-1dc51:BmIJ7OrbDUA0agVkgXo0ofm34lQzIcWs@svc-3482219c-a389-4079-b18b-d50662524e8a-shared-dml.aws-virginia-6.svc.singlestore.com:3333/db_marta_abaa0"
+
 DB_NAME = "db_jorge_dc4ac"
 SINGLESTOREDB_URL = "jorge-45214:MQ2ASEdSu3amqhSxt27AznS3Z6f5Dxru@svc-3482219c-a389-4079-b18b-d50662524e8a-shared-dml.aws-virginia-6.svc.singlestore.com:3333/db_jorge_dc4ac"
 
@@ -17,6 +20,7 @@ def clean_db(conn):
         cur.execute("DROP TABLE IF EXISTS items")
         print("Deleted bundle_items table")
         cur.execute("DROP TABLE IF EXISTS bundle_items")
+        
 
 def setup_db(conn, cleanup=False):
     if cleanup:
@@ -40,7 +44,7 @@ def setup_db(conn, cleanup=False):
             bundle_id INT AUTO_INCREMENT PRIMARY KEY,
             name VARCHAR(128),
             description VARCHAR(256),
-            instructions VARCHAR(256),
+            instructions TEXT,
             image_url VARCHAR(256)
         )
         """)
@@ -59,10 +63,9 @@ def setup_db(conn, cleanup=False):
         # Create bundle items table
         cur.execute("""
         CREATE TABLE IF NOT EXISTS bundle_items (
-            bundle_id INT,
-            item_id INT,
-            quantity INT,
-            PRIMARY KEY (item_id, bundle_id)
+            bundle_id INT PRIMARY KEY,
+            ingredient VARCHAR(32),
+            quantity INT
         )
         """)
         # FOREIGN KEY item_id(item_id) REFERENCES items(item_id),
