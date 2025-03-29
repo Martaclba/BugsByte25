@@ -13,6 +13,36 @@ export async function get_bundles(user_id: string): Promise<BundleOverview[]> {
       "O arroz de tomate é um prato típico português, cremoso e aromático, feito com arroz cozido em molho de tomate temperado.",
       "asd"
     ),
+    new BundleOverview(
+      "12346",
+      "Arroz de Tomate",
+      "O arroz de tomate é um prato típico português, cremoso e aromático, feito com arroz cozido em molho de tomate temperado.",
+      "asd"
+    ),
+    new BundleOverview(
+      "12347",
+      "Arroz de Tomate",
+      "O arroz de tomate é um prato típico português, cremoso e aromático, feito com arroz cozido em molho de tomate temperado.",
+      "asd"
+    ),
+    new BundleOverview(
+      "12348",
+      "Arroz de Tomate",
+      "O arroz de tomate é um prato típico português, cremoso e aromático, feito com arroz cozido em molho de tomate temperado.",
+      "asd"
+    ),
+    new BundleOverview(
+      "12349",
+      "Arroz de Tomate",
+      "O arroz de tomate é um prato típico português, cremoso e aromático, feito com arroz cozido em molho de tomate temperado.",
+      "asd"
+    ),
+    new BundleOverview(
+      "12340",
+      "Arroz de Tomate",
+      "O arroz de tomate é um prato típico português, cremoso e aromático, feito com arroz cozido em molho de tomate temperado.",
+      "asd"
+    ),
   ];
 }
 
