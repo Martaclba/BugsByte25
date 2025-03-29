@@ -8,29 +8,31 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [user_id, setUserID] = useState<string|undefined|null>();
   const [bundles, setBundles] = useState<BundleOverview[]>([]);
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
   const router = useRouter();
 
-  const user_id = localStorage.getItem("username");
-
   useEffect(() => {
-    if (!user_id) {
+    setUserID(localStorage.getItem("username"))
+
+    if (user_id === null) {
       router.push("/login");
       return;
     }
 
     const fetchBundles = async () => {
       try {
-        const data = await get_bundles(user_id); 
+        const data = await get_bundles(user_id!); 
         setBundles(data);
       } catch (error) {
         console.error("Failed to fetch bundles:", error);
       }
     };
 
-    fetchBundles();
+    if (user_id !== undefined)
+      fetchBundles();
   }, [user_id, router]);
 
   if (!user_id) {
