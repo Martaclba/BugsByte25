@@ -1,12 +1,24 @@
 "use client"
 
-import { Bundle } from "@/lib/bundle"
+import { Bundle, Product } from "@/lib/bundle"
 import { get_bundle } from "@/lib/endpoints";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react"
 import Image from "next/image";
 
 import { use } from 'react';
+import Footer from "@/components/Footer";
+
+function Price({product}: {product: Product}) {
+  if (product.basePrice == product.price) {
+    return <p className="text-md">{product.price}€</p>;
+  } else {
+    return <>
+      <span className="text-sm text-gray-500 line-through">{product.basePrice}€</span>
+      <span> {product.price}€</span>
+    </>;
+  }
+}
 
 export default function BundlePage({params} : { params: Promise<{ bundle_id: string }> }) {
   const router = useRouter();
@@ -18,13 +30,18 @@ export default function BundlePage({params} : { params: Promise<{ bundle_id: str
       fetchBundle();
     }, []);
 
-  return <div className="flex flex-col w-full bg-white min-h-screen px-4">
+  return <div className="flex flex-col w-full bg-white min-h-screen p-4">
     <button onClick={() => router.back()}>
-      &#8592;
+      <Image
+        src="/chevronleft.svg"
+        alt="back"
+        width={26}
+        height={26}
+      />
     </button>
     {/*<h1 className="text-black/70 text-3xl">Bundly</h1>*/}
 
-    <div className="text-black shadow my-8 py-2 px-4 rounded-lg flex flex-col gap-4 w-full relative">
+    <div className="text-black shadow my-4 py-3 px-4 rounded-lg flex flex-col gap-4 w-full relative">
       <div className="absolute top-0 left-0 bg-red-600 w-full h-1.5 rounded-t-lg"></div>
 
       <div className="flex flex-row w-full justify-between items-center py-2">
@@ -40,16 +57,22 @@ export default function BundlePage({params} : { params: Promise<{ bundle_id: str
         height={100}
       />
 
-      <p className="text-black/50 text-sm text-justify">{bundle?.overview.description}</p>
+      <p className="text-black/50 text-md text-justify">{bundle?.overview.description}</p>
 
-      <table className="table-auto">
+      <table className="table-fixed border-separate border-spacing-y-3">
         <tbody>
           {bundle?.items.map((i) =>
-            <tr key={i.product.product_id} className="py-2">
-              <td>{i.quantity}x</td>
+            <tr key={i.product.product_id}>
+              <td className="w-20">
+                <div className="rounded relative w-3/4 h-14 bg-black">
+                  <Image src="/receita.jpg" alt="<?>" fill objectFit="cover"/>
+                </div>
+              </td>
+              <td className="w-8">{i.quantity}x</td>
               <td>{i.product.name}</td>
-              
-              <td>{i.product.price}€</td>
+              <td className="w-15">
+                <Price product={i.product}/>
+              </td>
             </tr>
           )}
         </tbody>
@@ -57,16 +80,16 @@ export default function BundlePage({params} : { params: Promise<{ bundle_id: str
       
       <p className="text-black/50 text-sm text-justify">{bundle?.instructions}</p>
 
-      <p className="mx-auto">Código: TODO</p>
+      <p className="mx-auto">Código: {bundle?.overview.bundle_id}</p>
       <div className="flex flex-row w-full justify-center items-center py-2">
-        <div className="flex rounded-full p-3 mx-4 items-center justify-center bg-gray-300">
+        <button onClick={() => console.log("ola")} className="cursor-pointer flex rounded-full p-3 mx-4 items-center justify-center bg-gray-300">
           <Image src="/like.svg" alt="like" width={40} height={40}/>
-        </div>
-        <div className="flex rounded-full p-3 mx-4 items-center justify-center bg-gray-300">
+        </button>
+        <button className="cursor-pointer flex rounded-full p-3 mx-4 items-center justify-center bg-gray-300">
           <Image src="/print.svg" alt="print" width={40} height={40}/>
-        </div>
-        
+        </button>
       </div>
     </div>
+    <Footer />
   </div>;
 }
