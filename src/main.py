@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Resource, Api
 from setup import *
-from model import *
+from populate import *
 
 
 app = Flask(__name__)
@@ -67,14 +67,12 @@ api.add_resource(RecommendService, '/api/users/<string:username>/bundles')
 api.add_resource(BundleService, '/api/users/<string:username>/bundles/<string:bundle_id>')
 
 if __name__ == '__main__':
-    
-    # Load and compute model, 
-    #load_model("datasets/sample_prod_info.csv")
-    
     conn = connect_db()
-    setup_db(conn, cleanup=True)
+    setup_db(conn, cleanup=False)
 
-    populate_users(conn, "datasets/sample_sales_info_encripted.csv")
+    # Populate database with datasets
+    model = compute_model(conn, "../datasets/sample_sales_info_encripted.csv", "../datasets/recipes.json")
+    bundle_ids = get_recommendations(model, 839934211079)
 
 
     app.run(host='0.0.0.0', port=5000, debug=True)
