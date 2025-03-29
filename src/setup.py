@@ -65,8 +65,6 @@ def setup_db(conn, cleanup=False):
             PRIMARY KEY (item_id, bundle_id)
         )
         """)
-        # FOREIGN KEY item_id(item_id) REFERENCES items(item_id),
-        # FOREIGN KEY bundle_id(bundle_id) REFERENCES bundles(bundle_id)
         print("Created bundle items table")
     return conn
 
