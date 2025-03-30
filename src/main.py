@@ -24,7 +24,7 @@ class UserService(Resource):
 class RecommendService(Resource):
     def get(self, username):
         #TODO: select best bundles for the user
-        return { 'bundles': retrieve_overviews(conn, ["1", "2", "3", "4", "5"]) }
+        return { 'bundles': retrieve_overviews(conn, [1,2,3,4,5]) }
 
 class BundleService(Resource):
     def get(self, username, bundle_id):
