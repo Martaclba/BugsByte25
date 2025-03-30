@@ -1,6 +1,8 @@
 from setup import *
 import pandas as pd
 import json
+import csv
+import math
 import random
 
 def populate_with_users(conn, users_df):
@@ -20,6 +22,7 @@ def populate_with_users(conn, users_df):
             )
             print(line)
 
+
 def populate_with_bundles(conn, recipes_path):
     try:
         with open(recipes_path, 'r', encoding='utf-8') as file:
@@ -29,7 +32,6 @@ def populate_with_bundles(conn, recipes_path):
         print(f"\nCarregando {len(recipes)} receitas do JSON...\n")
 
         with conn.cursor() as cur:
-            # for bundle_id, recipe in enumerate(recipes):
             for bundle_id, recipe in enumerate(recipes, start=1):
                 name = recipe["name"]
                 description = recipe["description"]
@@ -43,20 +45,7 @@ def populate_with_bundles(conn, recipes_path):
 
                 for ingr_id, ingredient in enumerate(recipe["ingredients"]):
                     product = ingredient["product"]
-                    quantity = ingredient["quantity"]
-
-                    # Verificar se o item já existe
-                    # cur.execute("SELECT item_id FROM items WHERE name = %s", (product,))
-                    # result = cur.fetchone()
-
-                    # if result:
-                    #     item_id = result[0]  # Se já existir, obtém o ID
-                    #     print("\n\nitem_id = result[0] -> ", item_id, "\n\n")
-                    # else:
-                    #     # Inserir novo item na tabela `items`
-                    #     # cur.execute("INSERT INTO items (name) VALUES (%s)", (product,))
-                    #     item_id = cur.lastrowid
-                    #     print("\n\nitem_id = cur.lastrowid -> ", item_id, "\n\n")
+                    quantity = math.ceil(ingredient["quantity"])
 
                     # Inserir relação na tabela `bundle_items`
                     cur.execute("""
@@ -72,16 +61,47 @@ def populate_with_bundles(conn, recipes_path):
 
     except Exception as e:
         print(f"❌ Erro ao popular a base de dados: {e}")
-    finally:
-        conn.close()  # Garante que a conexão é fechada
+
+
+def populate_with_items(conn, items_path):
+    try:                
+        df = pd.read_csv(items_path, sep=';', encoding='utf-8')
+
+        selected_columns = ["sku", "product_dsc", df.columns[-1]]  
+        df = df[selected_columns]
+
+        df.columns = ["item_id", "name", "price_index"]
+
+        df["image_url"] = None  
+
+        print(df.head())
+
+        with conn.cursor() as cur:
+            num_items = len(df.index)
+            for index, row in df.iterrows():
+                cur.execute("""
+                    INSERT IGNORE INTO items (item_id, name, image_url, price_index) 
+                    VALUES (%s, %s, %s, %s)
+                """, (row["item_id"], row["name"], row["image_url"], row["price_index"]))
+                print(f'populating items {index} / {num_items}')
+
+        conn.commit()
+        print("✅ Base de dados populada com sucesso!")
+
+    except Exception as e:
+        print(f"❌ Erro ao popular a base de dados: {e}")
+
+
 
 
 if __name__ == '__main__':
     conn = connect_db()
     setup_db(conn, cleanup=True)
 
-    sales_df = pd.read_csv("../datasets/sample_sales_info_encripted.csv")
-    # items_df = pd.read_csv("../datasets/sample_prod_info.csv")
+    sales_df = pd.read_csv("../datasets/sample_sales_info_encripted.csv", sep=",", quotechar='"', encoding="utf-8", on_bad_lines="skip")
+    items_df = pd.read_csv("../datasets/sample_prod_info.csv", sep=",", quotechar='"', encoding="utf-8", on_bad_lines="skip")
+    
+    items_path = "../datasets/sample_prod_info.csv"
 
     # Populate with users
     print("Populating database with users")
@@ -89,8 +109,10 @@ if __name__ == '__main__':
     
     # Populate with bundles and blunde items
     print("Populating database with bundles")
-    populate_with_bundles(conn, "recipes.json")
+    populate_with_bundles(conn, "../recipes.json")
 
     # Populate with items
     print("Populating database with items data")
-    # TODO:
+    populate_with_items(conn, items_path)
+
+    conn.close()

@@ -1,10 +1,10 @@
 import singlestoredb as s2
 
-# DB_NAME = "db_marta_abaa0"
-# SINGLESTOREDB_URL = "marta-1dc51:BmIJ7OrbDUA0agVkgXo0ofm34lQzIcWs@svc-3482219c-a389-4079-b18b-d50662524e8a-shared-dml.aws-virginia-6.svc.singlestore.com:3333/db_marta_abaa0"
+DB_NAME = "db_marta_abaa0"
+SINGLESTOREDB_URL = "marta-1dc51:BmIJ7OrbDUA0agVkgXo0ofm34lQzIcWs@svc-3482219c-a389-4079-b18b-d50662524e8a-shared-dml.aws-virginia-6.svc.singlestore.com:3333/db_marta_abaa0"
 
-DB_NAME = "db_jorge_dc4ac"
-SINGLESTOREDB_URL = "jorge-45214:MQ2ASEdSu3amqhSxt27AznS3Z6f5Dxru@svc-3482219c-a389-4079-b18b-d50662524e8a-shared-dml.aws-virginia-6.svc.singlestore.com:3333/db_jorge_dc4ac"
+# DB_NAME = "db_jorge_dc4ac"
+# SINGLESTOREDB_URL = "jorge-45214:MQ2ASEdSu3amqhSxt27AznS3Z6f5Dxru@svc-3482219c-a389-4079-b18b-d50662524e8a-shared-dml.aws-virginia-6.svc.singlestore.com:3333/db_jorge_dc4ac"
 
 def connect_db():
     conn = s2.connect(SINGLESTOREDB_URL)
@@ -55,7 +55,8 @@ def setup_db(conn, cleanup=False):
         CREATE TABLE IF NOT EXISTS items (
             item_id INT PRIMARY KEY,
             name VARCHAR(64),
-            image_url VARCHAR(256)
+            image_url VARCHAR(256),
+            price_index FLOAT
         )
         """)
         print("Created items table")
