@@ -122,12 +122,19 @@ def compute_model_db(conn, sales_csv_path, recipes_json_path):
             print(f"populating bundles_vectors {idx} / {num_bundles}")
 
 # Return list of recommended bundle_id's from the vector database
-def get_recommendations_db(conn, user_id, num_recommendations = 20):
+def get_recommendations_db(conn, username, num_recommendations = 20):
     with conn.cursor() as cursor:
         # Get the embedding vector of the user
-        cursor.execute("SELECT * FROM users_vectors")
+        cursor.execute("""
+            SELECT b.bundle_id, DOT_PRODUCT(normalize(u.embedding), normalize(b.embedding)) AS similarity
+            FROM users_vectors u
+            INNER JOIN bundles_vectors b
+            ON u.username = %s
+            ORDER BY similarity DESC
+            LIMIT %s
+        """, (username, num_recommendations))
         rows = cursor.fetchall()
-        for row in rows:
-            print("ROW", row)
+
+        return list(map(lambda t: t[0] , rows))
 
     return list(range(20))

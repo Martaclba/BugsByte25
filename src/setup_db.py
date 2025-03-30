@@ -12,19 +12,31 @@ def connect_db():
 
 def clean_db(conn):
     with conn.cursor() as cur:
-        print("Deleted users table")
-        cur.execute("DROP TABLE IF EXISTS users")
-        print("Deleted bundles table")
-        cur.execute("DROP TABLE IF EXISTS bundles")
-        print("Deleted items table")
-        cur.execute("DROP TABLE IF EXISTS items")
-        print("Deleted bundle_items table")
-        cur.execute("DROP TABLE IF EXISTS bundle_items")
-        # Drop vector tables
-        print("Deleted bundles_vectors table")
-        cur.execute("DROP TABLE IF EXISTS bundles_vectors")
-        print("Deleted users_vectors table")
-        cur.execute("DROP TABLE IF EXISTS users_vectors")
+        # cur.execute("DROP TABLE IF EXISTS users")
+        # print("Deleted users table")
+
+        # cur.execute("DROP TABLE IF EXISTS bundles")
+        # print("Deleted bundles table")
+
+        # cur.execute("DROP TABLE IF EXISTS items")
+        # print("Deleted items table")
+
+        # cur.execute("DROP TABLE IF EXISTS bundle_items")
+        # print("Deleted bundle_items table")
+
+        ##### Drop vector tables #####
+
+        # cur.execute("DROP TABLE IF EXISTS bundles_vectors")
+        # print("Deleted bundles_vectors table")
+
+        # cur.execute("DROP TABLE IF EXISTS users_vectors")
+        # print("Deleted users_vectors table")
+
+        # print("Deleted normalize function")
+        # cur.execute("DROP FUNCTION IF EXISTS normalize")
+        
+        pass
+        
         
 
 def setup_db(conn, cleanup=False):
@@ -96,4 +108,16 @@ def setup_db(conn, cleanup=False):
         )
         """)
         print("Created users vectors table")
+
+        cur.execute("""
+            CREATE OR REPLACE FUNCTION normalize(v VECTOR(111)) RETURNS VECTOR(111) AS 
+            DECLARE 
+                squares VECTOR(111) = vector_mul(v,v); 
+                length FLOAT = sqrt(vector_elements_sum(squares));
+            BEGIN 
+                RETURN scalar_vector_mul(1/length, v);
+            END
+        """)
+        print("Created normalize function")
+
     return conn

@@ -21,7 +21,7 @@ def populate_with_bundles(conn, recipes_path):
             data = json.load(file)
 
         recipes = data.get("recipes", [])
-        print(f"\nCarregando {len(recipes)} receitas do JSON...\n")
+        print(f"Loading bundles {len(recipes)} from json ...\n")
 
         with conn.cursor() as cur:
             # for bundle_id, recipe in enumerate(recipes):
@@ -63,7 +63,7 @@ def populate_with_bundles(conn, recipes_path):
         # FIXME: Im pretty sure this is not needed since the 'raii-like' python with statement does this commit when out of scope
         # only remove/test this when theres time
         conn.commit()
-        print("✅ Base de dados populada com sucesso!")
+        print("Populated with bundles")
 
     except Exception as e:
         print(f"❌ Erro ao popular a base de dados: {e}")
@@ -80,11 +80,11 @@ if __name__ == '__main__':
 
     # Populate with users
     print("Populating database with users")
-    #populate_with_users(conn, sales_df)
+    # populate_with_users(conn, sales_df)
     
     # Populate with bundles and blunde items
     print("Populating database with bundles")
-    #populate_with_bundles(conn, "recipes.json")
+    # populate_with_bundles(conn, "recipes.json")
 
     # Populate with items
     print("Populating database with items data")
