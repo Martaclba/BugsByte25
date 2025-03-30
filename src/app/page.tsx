@@ -2,13 +2,15 @@
 
 import Footer from "@/components/Footer";
 import { BundleOverview } from "@/lib/bundle";
-import { get_bundles } from "@/lib/endpoints";
+import { get_bundles, get_user } from "@/lib/endpoints";
+import { User } from "@/lib/user";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [user_id, setUserID] = useState<string|undefined|null>();
+  const [user, setUser] = useState<User|undefined|null>();
   const [bundles, setBundles] = useState<BundleOverview[]>([]);
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
@@ -22,6 +24,8 @@ export default function Home() {
       return;
     }
 
+    const fetchUser = async () => setUser(await get_user(user_id!));
+
     const fetchBundles = async () => {
       try {
         const data = await get_bundles(user_id!); 
@@ -31,8 +35,9 @@ export default function Home() {
       }
     };
 
-    if (user_id !== undefined)
-      fetchBundles();
+    if (user_id !== undefined) {
+      fetchUser().then((_) => fetchBundles());
+    }
   }, [user_id, router]);
 
   if (!user_id) {
@@ -72,15 +77,16 @@ export default function Home() {
           <a href={`/login`}><Image src="/person.svg" alt="profile" width={23} height={23}/></a>        
         </div>
       </div>
-      <div className="px-4 mt-6 text-xl text-black/80"> Olá, {user_id} 👋</div>
+      <div className="px-4 mt-6 text-xl text-black/80"> Olá, {user?.name} 👋</div>
       <div className="flex flex-col gap-3 h-max md:px-[500px] px-4 mt-6 items-center justify-center">
         {filteredBundles.map((b: BundleOverview) => (
           <div key={b.bundle_id} className="text-black shadow border border-black/5 py-2 px-4 rounded-lg flex flex-row gap-4 w-full relative h-full">
             <div className="absolute h-full w-1.5 bg-[#eb0203] left-0 top-0 rounded-l-lg"></div>
             
-            <div className="w-1/3 h-32 rounded-lg ml-1 my-auto relative">
+            <div className="w-1/3 h-32 ml-1 my-auto relative">
               <Image 
-                src={b.image_url ?? "/image-missing.svg"} 
+                src={b.image_url ?? "/image-missing.svg"}
+                className="rounded-lg"
                 alt="receita"
                 fill objectFit="cover"
               />

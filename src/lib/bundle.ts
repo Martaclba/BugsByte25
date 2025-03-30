@@ -1,11 +1,11 @@
 export class BundleOverview {
-  bundle_id: string;
+  bundle_id: number;
   name: string;
   description?: string;
   image_url?: string;
 
   constructor(
-    bundle_id: string,
+    bundle_id: number,
     name: string,
     description?: string,
     image_url?: string
@@ -18,7 +18,7 @@ export class BundleOverview {
 }
 
 export class Bundle {
-  bundle_id: string;
+  bundle_id: number;
   name: string;
   description?: string;
   image_url?: string;
@@ -48,13 +48,13 @@ export class BundleItem {
 
 //start/end date of discount
 export class Product {
-  product_id: string;
+  product_id: number;
   name: string;
   base_price: number;
   price: number;
   image_url?: string;
 
-  constructor(product_id: string, name: string, base_price: number, price: number, image_url?: string) {
+  constructor(product_id: number, name: string, base_price: number, price: number, image_url?: string) {
     this.product_id = product_id;
     this.name = name;
     this.price = price;

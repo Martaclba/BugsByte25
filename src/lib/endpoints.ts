@@ -8,7 +8,7 @@ export async function get_user(username: string): Promise<User> {
 }
 
 export async function get_bundles(username: string): Promise<BundleOverview[]> {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/users/${username}/bundles`, );
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/users/${username}/bundles`);
   const data = await response.json();
   return data.bundles as BundleOverview[];
 }
