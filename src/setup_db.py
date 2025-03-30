@@ -12,14 +12,14 @@ def connect_db():
 
 def clean_db(conn):
     with conn.cursor() as cur:
-        # cur.execute("DROP TABLE IF EXISTS users")
-        # print("Deleted users table")
+        cur.execute("DROP TABLE IF EXISTS users")
+        print("Deleted users table")
 
-        cur.execute("DROP TABLE IF EXISTS bundles")
-        print("Deleted bundles table")
+        # cur.execute("DROP TABLE IF EXISTS bundles")
+        # print("Deleted bundles table")
 
-        cur.execute("DROP TABLE IF EXISTS bundle_items")
-        print("Deleted bundle_items table")
+        # cur.execute("DROP TABLE IF EXISTS bundle_items")
+        # print("Deleted bundle_items table")
 
         # cur.execute("DROP TABLE IF EXISTS items")
         # print("Deleted items table")

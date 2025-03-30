@@ -13,13 +13,11 @@ def populate_with_users(conn, users_df):
     with conn.cursor() as cursor:
         print("Gonna insert", len(users_df['account_no'].unique()), "users")
         for line, account_no in enumerate(users_df['account_no'].unique()):
-            cursor.execute("""
+            cursor.execute(f"""
                 INSERT IGNORE INTO users (username, name)
-                VALUES (%s, "%s %s")
+                VALUES (%s, "{random.choice(first_names)} {random.choice(last_names)}")
                 """,
-                (account_no),
-                random.choice(first_names),
-                random.choice(last_names)
+                (account_no)
             )
             print(line)
 
@@ -103,12 +101,12 @@ if __name__ == '__main__':
     items_path = "../datasets/sample_prod_info.csv"
 
     # Populate with users
-    #print("Populating database with users")
-    #populate_with_users(conn, sales_df)
+    # print("Populating database with users")
+    # populate_with_users(conn, sales_df)
     
     # Populate with bundles and blunde items
-    print("Populating database with bundles")
-    populate_with_bundles(conn, "recipes.json")
+    # print("Populating database with bundles")
+    # populate_with_bundles(conn, "recipes.json")
 
     # Populate with items
     #print("Populating database with items data")

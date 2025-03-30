@@ -16,13 +16,10 @@ conn = connect_db()
 
 class UserService(Resource):
     def get(self, username):
-        #user = retrieve_user(username)
-        user = {
-            'username': "paulo_figueira",
-            'name': "Paulo Figueira",
-        }
-
-        return { 'users': user }
+        print("username", username)
+        print("len(username)", len(username))
+        user = retrieve_user(conn, username)
+        return user
     
 class RecommendService(Resource):
     def get(self, username):

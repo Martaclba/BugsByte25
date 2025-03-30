@@ -1,9 +1,22 @@
+def retrieve_user(conn, username):
+  with conn.cursor() as cursor:
+    cursor.execute("SELECT username, name FROM users WHERE username = %s", (username))
+    user_row = cursor.fetchone()
+
+    print(user_row)
+    
+    user = {
+      "username": user_row[0],
+      "name": user_row[1]
+    }
+    return user
+    
+  return {}
+
 def retrieve_overviews(conn, bundle_ids):
   if bundle_ids == []:
     return []
-  
-  print(bundle_ids)
-  
+
   with conn.cursor() as cur:
     print(f"SELECT bundle_id, name, description, image_url FROM bundles WHERE bundle_id IN ({','.join(str(id) for id in bundle_ids)})")
     cur.execute(f"SELECT bundle_id, name, description, image_url FROM bundles WHERE bundle_id IN ({','.join(str(id) for id in bundle_ids)})")
