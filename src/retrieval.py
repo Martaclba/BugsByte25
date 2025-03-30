@@ -2,6 +2,8 @@ def retrieve_overviews(conn, bundle_ids):
   if bundle_ids == []:
     return []
   
+  print(bundle_ids)
+  
   with conn.cursor() as cur:
     print(f"SELECT bundle_id, name, description, image_url FROM bundles WHERE bundle_id IN ({','.join(str(id) for id in bundle_ids)})")
     cur.execute(f"SELECT bundle_id, name, description, image_url FROM bundles WHERE bundle_id IN ({','.join(str(id) for id in bundle_ids)})")

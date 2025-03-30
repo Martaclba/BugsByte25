@@ -15,14 +15,14 @@ def clean_db(conn):
         # cur.execute("DROP TABLE IF EXISTS users")
         # print("Deleted users table")
 
-        # cur.execute("DROP TABLE IF EXISTS bundles")
-        # print("Deleted bundles table")
+        cur.execute("DROP TABLE IF EXISTS bundles")
+        print("Deleted bundles table")
+
+        cur.execute("DROP TABLE IF EXISTS bundle_items")
+        print("Deleted bundle_items table")
 
         # cur.execute("DROP TABLE IF EXISTS items")
         # print("Deleted items table")
-
-        # cur.execute("DROP TABLE IF EXISTS bundle_items")
-        # print("Deleted bundle_items table")
 
         ##### Drop vector tables #####
 
@@ -35,7 +35,7 @@ def clean_db(conn):
         # print("Deleted normalize function")
         # cur.execute("DROP FUNCTION IF EXISTS normalize")
 
-        pass
+        # pass
         
         
 

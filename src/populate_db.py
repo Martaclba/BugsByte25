@@ -95,7 +95,7 @@ def populate_with_items(conn, items_path):
 
 if __name__ == '__main__':
     conn = connect_db()
-    setup_db(conn, cleanup=False)
+    setup_db(conn, cleanup=True)
 
     sales_df = pd.read_csv("../datasets/sample_sales_info_encripted.csv", sep=",", quotechar='"', encoding="utf-8", on_bad_lines="skip")
     items_df = pd.read_csv("../datasets/sample_prod_info.csv", sep=",", quotechar='"', encoding="utf-8", on_bad_lines="skip")
@@ -107,8 +107,8 @@ if __name__ == '__main__':
     #populate_with_users(conn, sales_df)
     
     # Populate with bundles and blunde items
-    #print("Populating database with bundles")
-    # populate_with_bundles(conn, "recipes.json")
+    print("Populating database with bundles")
+    populate_with_bundles(conn, "recipes.json")
 
     # Populate with items
     #print("Populating database with items data")

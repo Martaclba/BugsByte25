@@ -271,17 +271,17 @@
             "image_url": "https://feed.continente.pt/media/zj0fub3u/menusemanal_bolachasmanteigaamendoim_16x9_thumb.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133824667411500000&format=webp",
             "ingredients": [
                 {
-                    "quantity": 115,
+                    "quantity": 1,
                     "product": "manteiga",
                     "image_url": ""
                 },
                 {
-                    "quantity": 50,
+                    "quantity": 1,
                     "product": "açucar",
                     "image_url": ""
                 },
                 {
-                    "quantity": 100,
+                    "quantity": 1,
                     "product": "açucar amarelo",
                     "image_url": ""
                 },
@@ -296,12 +296,12 @@
                     "image_url": ""
                 },
                 {
-                    "quantity": 250,
+                    "quantity": 1,
                     "product": "manteiga de amendoim",
                     "image_url": ""
                 },
                 {
-                    "quantity": 120,
+                    "quantity": 1,
                     "product": "farinha",
                     "image_url": ""
                 },
@@ -456,7 +456,7 @@
                     "image_url": ""
                 },
                 {
-                    "quantity": 100,
+                    "quantity": 1,
                     "product": "espinafres",
                     "image_url": ""
                 },
@@ -515,12 +515,12 @@
                     "image_url": ""
                 },
                 {
-                    "quantity": 300,
+                    "quantity": 1,
                     "product": "ervilhas",
                     "image_url": ""
                 },
                 {
-                    "quantity": 150,
+                    "quantity": 1,
                     "product": "batatas",
                     "image_url": ""
                 },
@@ -545,7 +545,7 @@
                     "image_url": ""
                 },
                 {
-                    "quantity": 50,
+                    "quantity": 1,
                     "product": "amêndoa",
                     "image_url": ""
                 }
@@ -605,12 +605,12 @@
             "image_url": "https://feed.continente.pt/media/42tmi0y5/arroz-de-sarrabulho.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133838502611900000&format=webp",
             "ingredients": [
                 {
-                    "quantity": 100,
+                    "quantity": 2,
                     "product": "carne de vaca",
                     "image_url": ""
                 },
                 {
-                    "quantity": 150,
+                    "quantity": 1,
                     "product": "galinha",
                     "image_url": ""
                 },
@@ -630,12 +630,12 @@
                     "image_url": ""
                 },
                 {
-                    "quantity": 75,
-                    "product": "bofe de porco",
+                    "quantity": 1,
+                    "product": "bife de porco",
                     "image_url": ""
                 },
                 {
-                    "quantity": 50,
+                    "quantity": 1,
                     "product": "chouriço de carne",
                     "image_url": ""
                 },
@@ -685,12 +685,12 @@
                     "image_url": ""
                 },
                 {
-                    "quantity": 300,
+                    "quantity": 1,
                     "product": "arroz carolino",
                     "image_url": ""
                 },
                 {
-                    "quantity": 150,
+                    "quantity": 1,
                     "product": "sangue de porco",
                     "image_url": ""
                 },
@@ -739,12 +739,12 @@
                     "image_url": ""
                 },
                 {
-                    "quantity": 80,
+                    "quantity": 1,
                     "product": "chouriço",
                     "image_url": ""
                 },
                 {
-                    "quantity": 400,
+                    "quantity": 1,
                     "product": "carne picada",
                     "image_url": ""
                 },
@@ -764,12 +764,12 @@
                     "image_url": ""
                 },
                 {
-                    "quantity": 80,
+                    "quantity": 1,
                     "product": "farinha",
                     "image_url": ""
                 },
                 {
-                    "quantity": 200,
+                    "quantity": 1,
                     "product": "leite magro",
                     "image_url": ""
                 },
@@ -862,7 +862,7 @@
             "image_url": "https://feed.continente.pt/media/1j2oi0ig/secretos-porco-preto.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133854666660300000&format=webp",
             "ingredients": [
                 {
-                    "quantity": 300,
+                    "quantity": 1,
                     "product": "secretos de porco",
                     "image_url": ""
                 },
@@ -899,17 +899,17 @@
             "image_url": "https://feed.continente.pt/media/qqcgxmmi/pizza-vegetariana.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133872795167030000&format=webp",
             "ingredients": [
                 {
-                    "quantity": 30,
+                    "quantity": 1,
                     "product": "queijo",
                     "image_url": ""
                 },
                 {
-                    "quantity": 25,
+                    "quantity": 1,
                     "product": "manjericão",
                     "image_url": ""
                 },
                 {
-                    "quantity": 20,
+                    "quantity": 1,
                     "product": "amêndoa",
                     "image_url": ""
                 },
@@ -959,7 +959,7 @@
                     "image_url": ""
                 },
                 {
-                    "quantity": 200,
+                    "quantity": 1,
                     "product": "rúcula",
                     "image_url": ""
                 },
@@ -969,7 +969,7 @@
                     "image_url": ""
                 },
                 {
-                    "quantity": 100,
+                    "quantity": 1,
                     "product": "rabanete",
                     "image_url": ""
                 },
@@ -1003,7 +1003,7 @@
                     "image_url": ""
                 },
                 {
-                    "quantity": 160,
+                    "quantity": 1,
                     "product": "farinha de aveia",
                     "image_url": ""
                 },
@@ -1102,7 +1102,7 @@
             "image_url": "https://feed.continente.pt/media/izabowdu/salada-fria.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133800316881730000&format=webp",
             "ingredients": [
                 {
-                    "quantity": 250,
+                    "quantity": 1,
                     "product": "massa em laços"
                 },
                 {
@@ -1155,7 +1155,7 @@
                     "product": "requejão"
                 },
                 {
-                    "quantity": 80,
+                    "quantity": 1,
                     "product": "leite"
                 },
                 {
