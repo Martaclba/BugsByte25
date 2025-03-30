@@ -1,9 +1,10 @@
-from setup import *
+from setup_db import *
 import pandas as pd
 import json
 import csv
 import math
 import random
+from model import *
 
 def populate_with_users(conn, users_df):
     first_names = ["João", "Pedro", "Paulo", "Tiago", "Maria", "Marta", "Jorge", "Joana", "Mariana", "Ana"]
@@ -29,7 +30,7 @@ def populate_with_bundles(conn, recipes_path):
             data = json.load(file)
 
         recipes = data.get("recipes", [])
-        print(f"\nCarregando {len(recipes)} receitas do JSON...\n")
+        print(f"Loading bundles {len(recipes)} from json ...\n")
 
         with conn.cursor() as cur:
             for bundle_id, recipe in enumerate(recipes, start=1):
@@ -57,7 +58,7 @@ def populate_with_bundles(conn, recipes_path):
         # FIXME: Im pretty sure this is not needed since the 'raii-like' python with statement does this commit when out of scope
         # only remove/test this when theres time
         conn.commit()
-        print("✅ Base de dados populada com sucesso!")
+        print("Populated with bundles")
 
     except Exception as e:
         print(f"❌ Erro ao popular a base de dados: {e}")
@@ -86,17 +87,17 @@ def populate_with_items(conn, items_path):
                 print(f'populating items {index} / {num_items}')
 
         conn.commit()
-        print("✅ Base de dados populada com sucesso!")
+        print("Populated with bundles")
 
     except Exception as e:
         print(f"❌ Erro ao popular a base de dados: {e}")
-
-
+    #finally:
+    #    conn.close()  # Garante que a conexão é fechada
 
 
 if __name__ == '__main__':
     conn = connect_db()
-    setup_db(conn, cleanup=True)
+    setup_db(conn, cleanup=False)
 
     sales_df = pd.read_csv("../datasets/sample_sales_info_encripted.csv", sep=",", quotechar='"', encoding="utf-8", on_bad_lines="skip")
     items_df = pd.read_csv("../datasets/sample_prod_info.csv", sep=",", quotechar='"', encoding="utf-8", on_bad_lines="skip")
@@ -105,14 +106,15 @@ if __name__ == '__main__':
 
     # Populate with users
     print("Populating database with users")
-    #populate_with_users(conn, sales_df)
+    # populate_with_users(conn, sales_df)
     
     # Populate with bundles and blunde items
     print("Populating database with bundles")
-    populate_with_bundles(conn, "../recipes.json")
+    #populate_with_bundles(conn, "../recipes.json")
 
     # Populate with items
     print("Populating database with items data")
     populate_with_items(conn, items_path)
 
-    conn.close()
+    # Populate vector tables with model
+    compute_model_db(conn, "../datasets/sample_sales_info_encripted.csv", "../datasets/recipes.json")
