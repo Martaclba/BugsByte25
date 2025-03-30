@@ -3,16 +3,22 @@ import pandas as pd
 import json
 import csv
 import math
+import random
 
 def populate_with_users(conn, users_df):
+    first_names = ["João", "Pedro", "Paulo", "Tiago", "Maria", "Marta", "Jorge", "Joana", "Mariana", "Ana"]
+    last_names = ["Silva", "Freitas", "Fernandes", "Lima", "Pereira", "Alves", "Ortiga", "Oliveira", "Marques"]
+
     with conn.cursor() as cursor:
         print("Gonna insert", len(users_df['account_no'].unique()), "users")
         for line, account_no in enumerate(users_df['account_no'].unique()):
             cursor.execute("""
                 INSERT IGNORE INTO users (username, name)
-                VALUES (%s, "Default Name")
+                VALUES (%s, "%s %s")
                 """,
-                (account_no)
+                (account_no),
+                random.choice(first_names),
+                random.choice(last_names)
             )
             print(line)
 

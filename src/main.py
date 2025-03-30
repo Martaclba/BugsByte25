@@ -1,11 +1,15 @@
 from flask import Flask
 from flask_restful import Resource, Api
+from flask_cors import CORS
 from setup import *
+from retrieval import *
 from model import *
 import json
 
 
 app = Flask(__name__)
+cors = CORS(app) # allow CORS for all domains on all routes.
+app.config['CORS_HEADERS'] = 'Content-Type'
 api = Api(app)
 
 class UserService(Resource):
@@ -19,49 +23,12 @@ class UserService(Resource):
     
 class RecommendService(Resource):
     def get(self, username):
-        bundles = [{
-            "bundle_id": 1,
-            "title": "This is a title",
-            "description": "...",
-            "instructions":  "...",
-            "items": [
-                {
-                    "item_id": 2,
-                    "quantity": 1,
-                    "product": "acucar",
-                    "image_url": "...",
-                },
-                {
-                    "item_id": 3,
-                    "quantity": 2,
-                    "product": "farinha",
-                    "image_url": "...",
-                },
-            ]
-        }]
-    
-        return { 'bundles': bundles }
+        #TODO: select best bundles for the user
+        return { 'bundles': retrieve_overviews(conn, [1,2,3,4,5]) }
 
 class BundleService(Resource):
-    def get(self, username):
-        bundle_recommendation = {
-            "bundle_id": 1, 
-            "title": "...",
-            "start_date": "...",
-            "end_date": "...",
-            "description": "...",
-            "instructions":  "...",
-            "items": [
-                {
-                    "quantity": 1,
-                    "product": "acucar",
-                    "image_url": "...",
-                },
-                ...
-            ]
-        }
-    
-        return bundle_recommendation
+    def get(self, username, bundle_id):
+        return retrieve_bundle(conn, bundle_id)
 
 api.add_resource(UserService, '/api/users/<string:username>')
 api.add_resource(RecommendService, '/api/users/<string:username>/bundles')
