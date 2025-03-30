@@ -33,7 +33,7 @@ def populate_with_bundles(conn, recipes_path):
         print(f"Loading bundles {len(recipes)} from json ...\n")
 
         with conn.cursor() as cur:
-            for bundle_id, recipe in enumerate(recipes, start=1):
+            for bundle_id, recipe in enumerate(recipes):
                 name = recipe["name"]
                 description = recipe["description"]
                 image_url = recipe["image_url"]
@@ -73,9 +73,7 @@ def populate_with_items(conn, items_path):
 
         df.columns = ["item_id", "name", "price_index"]
 
-        df["image_url"] = None  
-
-        print(df.head())
+        df["image_url"] = None
 
         with conn.cursor() as cur:
             num_items = len(df.index)
@@ -105,16 +103,16 @@ if __name__ == '__main__':
     items_path = "../datasets/sample_prod_info.csv"
 
     # Populate with users
-    print("Populating database with users")
-    # populate_with_users(conn, sales_df)
+    #print("Populating database with users")
+    #populate_with_users(conn, sales_df)
     
     # Populate with bundles and blunde items
-    print("Populating database with bundles")
-    #populate_with_bundles(conn, "../recipes.json")
+    #print("Populating database with bundles")
+    # populate_with_bundles(conn, "recipes.json")
 
     # Populate with items
-    print("Populating database with items data")
-    populate_with_items(conn, items_path)
+    #print("Populating database with items data")
+    # populate_with_items(conn, items_path)
 
     # Populate vector tables with model
-    compute_model_db(conn, "../datasets/sample_sales_info_encripted.csv", "../datasets/recipes.json")
+    # compute_model_db(conn, "../datasets/sample_sales_info_encripted.csv", "../datasets/recipes.json")

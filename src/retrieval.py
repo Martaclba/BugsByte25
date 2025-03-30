@@ -3,10 +3,22 @@ def retrieve_overviews(conn, bundle_ids):
     return []
   
   with conn.cursor() as cur:
+    print(f"SELECT bundle_id, name, description, image_url FROM bundles WHERE bundle_id IN ({','.join(str(id) for id in bundle_ids)})")
     cur.execute(f"SELECT bundle_id, name, description, image_url FROM bundles WHERE bundle_id IN ({','.join(str(id) for id in bundle_ids)})")
     bundles = cur.fetchall()
+    print("argument bundles", len(bundle_ids))
+    print("bundles", len(bundles))
 
-    ans = {b[0]: { "bundle_id": b[0], "name": b[1], "description": b[2], "image_url": b[3] } for b in bundles }
+    ans = {
+      b[0]: { 
+        "bundle_id": b[0],
+        "name": b[1],
+        "description": b[2],
+        "image_url": b[3]
+      }
+      for b in bundles 
+    }
+
     return [ans[id] for id in bundle_ids]
   
 

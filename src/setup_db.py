@@ -34,7 +34,7 @@ def clean_db(conn):
 
         # print("Deleted normalize function")
         # cur.execute("DROP FUNCTION IF EXISTS normalize")
-        
+
         pass
         
         
@@ -72,7 +72,8 @@ def setup_db(conn, cleanup=False):
         CREATE TABLE IF NOT EXISTS items (
             item_id INT PRIMARY KEY,
             name VARCHAR(64),
-            image_url VARCHAR(256)
+            image_url VARCHAR(256),
+            price_index FLOAT
         )
         """)
         print("Created items table")
