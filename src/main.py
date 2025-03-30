@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import Resource, Api
-from setup import *
+from setup_db import *
 from model import *
 import json
 
@@ -127,8 +127,11 @@ if __name__ == '__main__':
     conn = connect_db()
     setup_db(conn, cleanup=False)
 
-    # Populate database with datasets
-    model = compute_model(conn, "../datasets/sample_sales_info_encripted.csv", "../datasets/recipes.json")
-    bundle_ids = get_recommendations(model, 839934211079)
+    # model = compute_model("../datasets/sample_sales_info_encripted.csv", "../datasets/recipes.json")
+    # bundle_ids = get_recommendations(model, 839934211079)
+
+    #compute_model_db(conn, "../datasets/sample_sales_info_encripted.csv", "../datasets/recipes.json")
+    bundle_ids = get_recommendations_db(conn, 839934211079)
+    print(bundle_ids)
 
     app.run(host='0.0.0.0', port=5000, debug=True)

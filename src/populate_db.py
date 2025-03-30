@@ -1,6 +1,7 @@
-from setup import *
+from setup_db import *
 import pandas as pd
 import json
+from model import *
 
 def populate_with_users(conn, users_df):
     with conn.cursor() as cursor:
@@ -72,7 +73,7 @@ def populate_with_bundles(conn, recipes_path):
 
 if __name__ == '__main__':
     conn = connect_db()
-    setup_db(conn, cleanup=True)
+    setup_db(conn, cleanup=False)
 
     sales_df = pd.read_csv("../datasets/sample_sales_info_encripted.csv")
     # items_df = pd.read_csv("../datasets/sample_prod_info.csv")
@@ -83,8 +84,11 @@ if __name__ == '__main__':
     
     # Populate with bundles and blunde items
     print("Populating database with bundles")
-    populate_with_bundles(conn, "recipes.json")
+    #populate_with_bundles(conn, "recipes.json")
 
     # Populate with items
     print("Populating database with items data")
     # TODO:
+
+    # Populate vector tables with model
+    compute_model_db(conn, "../datasets/sample_sales_info_encripted.csv", "../datasets/recipes.json")

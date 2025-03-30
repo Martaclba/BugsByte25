@@ -20,6 +20,11 @@ def clean_db(conn):
         cur.execute("DROP TABLE IF EXISTS items")
         print("Deleted bundle_items table")
         cur.execute("DROP TABLE IF EXISTS bundle_items")
+        # Drop vector tables
+        print("Deleted bundles_vectors table")
+        cur.execute("DROP TABLE IF EXISTS bundles_vectors")
+        print("Deleted users_vectors table")
+        cur.execute("DROP TABLE IF EXISTS users_vectors")
         
 
 def setup_db(conn, cleanup=False):
@@ -32,7 +37,7 @@ def setup_db(conn, cleanup=False):
         # Create users table
         cur.execute("""
         CREATE TABLE IF NOT EXISTS users (
-            username VARCHAR(32) UNIQUE PRIMARY KEY,
+            username VARCHAR(32) PRIMARY KEY,
             name VARCHAR(64)
         )
         """)
@@ -63,12 +68,32 @@ def setup_db(conn, cleanup=False):
         # Create bundle items table
         cur.execute("""
         CREATE TABLE IF NOT EXISTS bundle_items (
-            bundle_id INT PRIMARY KEY,
+            bundle_id INT,
             ingredient VARCHAR(32),
-            quantity INT
+            quantity INT,
+            PRIMARY KEY (bundle_id, ingredient)
         )
         """)
         print("Created bundle items table")
+
+        # Create vector tables
+        # NOTE: For now 'embedding' vector size (num of ingredients will be hardcoded).
+        #       Since we dont have the time to make it more dynamic atm.
+        cur.execute("""
+        CREATE TABLE IF NOT EXISTS users_vectors(
+            username VARCHAR(32) PRIMARY KEY,
+            embedding VECTOR(111)
+        )
+        """)
+        print("Created users vectors table")
+        
+        # NOTE: For now 'embedding' vector size (num of ingredients will be hardcoded).
+        #       Since we dont have the time to make it more dynamic atm.
+        cur.execute("""
+        CREATE TABLE IF NOT EXISTS bundles_vectors(
+            bundle_id INT PRIMARY KEY,
+            embedding VECTOR(111)
+        )
+        """)
+        print("Created users vectors table")
     return conn
-
-
