@@ -1,48 +1,26 @@
-from flask import Flask
-from flask_restful import Resource, Api
-from flask_cors import CORS
 from setup import *
-from retrieval import *
-from model import *
+import pandas as pd
 import json
 
+def populate_with_users(conn, users_df):
+    with conn.cursor() as cursor:
+        print("Gonna insert", len(users_df['account_no'].unique()), "users")
+        for line, account_no in enumerate(users_df['account_no'].unique()):
+            cursor.execute("""
+                INSERT IGNORE INTO users (username, name)
+                VALUES (%s, "Default Name")
+                """,
+                (account_no)
+            )
+            print(line)
 
-app = Flask(__name__)
-cors = CORS(app) # allow CORS for all domains on all routes.
-app.config['CORS_HEADERS'] = 'Content-Type'
-api = Api(app)
-
-class UserService(Resource):
-    def get(self, username):
-        user = {
-            'username': "paulo_figueira",
-            'name': "Paulo Figueira",
-        }
-
-        return { 'users': user }
-    
-class RecommendService(Resource):
-    def get(self, username):
-        #TODO: select best bundles for the user
-        return { 'bundles': retrieve_overviews(conn, ["1", "2", "3", "4", "5"]) }
-
-class BundleService(Resource):
-    def get(self, username, bundle_id):
-        return retrieve_bundle(conn, bundle_id)
-
-api.add_resource(UserService, '/api/users/<string:username>')
-api.add_resource(RecommendService, '/api/users/<string:username>/bundles')
-api.add_resource(BundleService, '/api/users/<string:username>/bundles/<string:bundle_id>')
-
-
-def populate_data(conn, recipes_path):
+def populate_with_bundles(conn, recipes_path):
     try:
         with open(recipes_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
 
         recipes = data.get("recipes", [])
         print(f"\nCarregando {len(recipes)} receitas do JSON...\n")
-
 
         with conn.cursor() as cur:
             # for bundle_id, recipe in enumerate(recipes):
@@ -81,6 +59,8 @@ def populate_data(conn, recipes_path):
                     """, (bundle_id, product, quantity))
 
 
+        # FIXME: Im pretty sure this is not needed since the 'raii-like' python with statement does this commit when out of scope
+        # only remove/test this when theres time
         conn.commit()
         print("✅ Base de dados populada com sucesso!")
 
@@ -92,10 +72,19 @@ def populate_data(conn, recipes_path):
 
 if __name__ == '__main__':
     conn = connect_db()
-    setup_db(conn, cleanup=False)
+    setup_db(conn, cleanup=True)
 
-    # Populate database with datasets
-    model = compute_model(conn, "../datasets/sample_sales_info_encripted.csv", "../datasets/recipes.json")
-    bundle_ids = get_recommendations(model, 839934211079)
+    sales_df = pd.read_csv("../datasets/sample_sales_info_encripted.csv")
+    # items_df = pd.read_csv("../datasets/sample_prod_info.csv")
 
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # Populate with users
+    print("Populating database with users")
+    #populate_with_users(conn, sales_df)
+    
+    # Populate with bundles and blunde items
+    print("Populating database with bundles")
+    populate_with_bundles(conn, "recipes.json")
+
+    # Populate with items
+    print("Populating database with items data")
+    # TODO:

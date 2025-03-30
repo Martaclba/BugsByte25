@@ -1,0 +1,1181 @@
+{
+    "recipes": [
+        {
+            "name": "Almôndegas Vegetarianas",
+            "description": "Uma versão deliciosa e nutritiva das clássicas almôndegas, feitas sem carne, mas cheias de sabor e textura. Perfeitas para acompanhar com esparguete!",
+            "image_url": "https://feed.continente.pt/media/flypfsvx/almondegas-vegetarianas.jpg?anchor=center&mode=crop&width=826&height=620&rnd=133827936456570000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 2,
+                    "product": "cenoura",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "açúcar",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "ovo",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "pao ralado",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "azeite",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "cebola",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "alho",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 3,
+                    "product": "coentros",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "leite de coco",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "água",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "sumo de lima",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "salsa",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Numa taça, coloque a cenoura ralada, a quinoa arrefecida, o pão ralado e os ovos batidos. Misture tudo muito bem e coloque o preparado no frigorífico por cerca de 30 minutos.",
+                "Aqueça um fio de azeite numa panela média e refogue a cebola picada e os dentes de alho picados finamente até a cebola ficar bem tenra.",
+                "Adicione o leite de coco, a água e o sumo de lima, deixe ferver e baixe o lume para brando, cozinhando por cerca de 10 minutos.",
+                "Com a mistura de cenoura e quinoa faça bolinhas e frite-as num fio de azeite até ficarem douradas.",
+                "Sirva-as com o molho preparado e polvilhadas com salsa picada."
+            ]
+        },
+        {
+            "name": "Bacalhau Fresco no Forno com Batatas",
+            "description": "Esta receita de bacalhau fresco no forno vai ser um autêntico sucesso lá em casa. Nesta versão, o bacalhau é acompanhado com um delicioso puré de batata em crosta que lhe confere uma textura crocante. Um prato de sabor intenso. Experimente!",
+            "image_url": "https://feed.continente.pt/media/roypegtv/bacalhau-fresco-no-forno.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133860731907230000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 2,
+                    "product": "bacalhau",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "pimenta",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 3,
+                    "product": "alho",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "tomilho",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 6,
+                    "product": "batata",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "leite magro",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "azeite",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "noz-moscada",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "azeitonas pretas",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Num tabuleiro de forno, tempere o bacalhau com pimenta e os dentes de alho picados finamente. Polvilhe com tomilho e reserve.",
+                "Coza as batatas descascadas em água e sal e depois e esmague-as bem.",
+                "Adicione o leite, a manteiga e a noz-moscada e volte a mexer até obter um puré macio.",
+                "Coloque o puré num saco de pasteleiro e, com movimentos circulares, cubra o bacalhau numa camada única, grossa e ondulada.",
+                "Leve o bacalhau ao forno pré-aquecido a 180ºC por cerca de 20 minutos.",
+                "Quando estiver pronto e o puré estiver em crosta, polvilhe-o com azeitonas e regue-o com um fio de azeite."
+            ]
+        },
+        {
+            "name": "Douradas na prata",
+            "description": "Do mar à prata, do forno ao prato! Experimente está fácil e saborosa receita.",
+            "image_url": "https://feed.continente.pt/media/2eenqxul/douradas-na-prata.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133866760542170000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 2,
+                    "product": "dourada",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "sal",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "pimenta",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "alho frances",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 6,
+                    "product": "tomate cereja",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "malaguetas",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "gengibre",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 6,
+                    "product": "batata",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "limao",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "cebolinho",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Tempere as douradas com sal e pimenta. Reserve.",
+                "Num tabuleiro de forma, coloque papel de prata. Coloque o alho francês cortado às rodelas, o tomate cereja em metades, as malaguetas sem sementes à rodelas.",
+                "Disponha as douradas por cima. Junte o gengibre ralado.",
+                "Adicione as batatas escaldadas à volta, tempere com o azeite, a raspa de limão e o cebolinho picado.",
+                "Coloque outra folha de prata por cima, fechando bem as extremidades e leve ao forno a 200ºC durante cerca de 45 minutos.",
+                "Sirva as douradas na prata e polvilhe cebolinho picado."
+            ]
+        },
+        {
+            "name": "Perca Grelhada com Tomatada",
+            "description": "Perca Grelhada com Tomatada, receita rápida e fácil de fazer!",
+            "image_url": "https://feed.continente.pt/media/ub5lykdt/perca-grelhada.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133846115381600000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 1,
+                    "product": "azeite",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "cebola",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "alho",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 3,
+                    "product": "tomate chucha",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "ovo",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 4,
+                    "product": "perca",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "sal",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "pimenta",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "lima",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "orégão",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Refogue a cebola picada e os dentes de alho picados finamente num fio de azeite.",
+                "Quando a cebola estiver tenra, acrescente o tomate cortado em cubinhos e deixe-os fritar até ficarem bem suaves. Mexa constantemente.",
+                "Parta os ovos sobre a mistura e deixe-os cozinhar em lume brando.",
+                "Tempere a perca com sal, pimenta, o sumo limão e orégãos.",
+                "Tempere a perca com sal, pimenta, o sumo limão e orégãos.",
+                "Grelhe-a num grelhador elétrico ou a carvão.",
+                "Sirva o peixe com a tomatada com ovos. Polvilhe com ervas a gosto."
+            ]
+        },
+        {
+            "name": "Bolachas de Manteiga de Amendoim",
+            "description": "Estas bolachas de manteiga de amendoim são uma autêntica delícia! Ideais para o pequeno-almoço ou para o lanche. Siga o passo a passo aqui.",
+            "image_url": "https://feed.continente.pt/media/zj0fub3u/menusemanal_bolachasmanteigaamendoim_16x9_thumb.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133824667411500000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 115,
+                    "product": "manteiga",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 50,
+                    "product": "açucar",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 100,
+                    "product": "açucar amarelo",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "ovo",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "aroma de baunilha",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 250,
+                    "product": "manteiga de amendoim",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 120,
+                    "product": "farinha",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "sal",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "fermento",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Bater a manteiga com os açúcares até obter uma pasta.",
+                "Juntar o ovo, a baunilha e a manteiga de amendoim. Bater novamente.",
+                "Numa tacinha à parte, misturar a farinha com o sal e o fermento. Adicionar a mistura de farinha aos poucos e bater em velocidade baixa.",
+                "Retirar porções de massa com uma colher de sopa e moldar pequenas bolas.",
+                "Colocar um pouco de açúcar num prato e passar cada bola pelo açúcar.",
+                "Colocar as bolas num tabuleiro forrado com papel vegetal, deixando um espaço entre cada uma. Pressionar cada uma com um garfo, duas vezes, de forma a obter um padrão cruzado.",
+                "Levar ao forno pré-aquecido a 180ºC durante 10 a 12 minutos.",
+                "Retirar e deixar arrefecer numa grelha de arrefecimento. Guardar num frasco hermeticamente fechado até 5 dias."
+            ]
+        },
+        {
+            "name": "Panquecas de Banana",
+            "description": "Esta receita de panquecas de banana é perfeita para o pequeno almoço, o brunch, o lanche ou até para a sobremesa.",
+            "image_url": "https://feed.continente.pt/media/ofwklie4/panquecas-de-banana.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133824678768700000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 2,
+                    "product": "banana",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "bebida vegetal de amêndoa",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "ovo",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "fermento",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "farinha de aveia",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "canela",
+                    "image_url": "pepitas de chocolate"
+                }
+            ],
+            "instructions": [
+                "Esmagar as bananas com um garfo e colocar numa taça. Juntar a bebida vegetal e os ovos e misturar muito bem com uma vara de arames.",
+                "Adicionar a farinha, o fermento e a canela e mexer até os ingredientes estarem todos incorporados. Acrescentar as pepitas de chocolate e envolver.",
+                "Aquecer uma frigideira anti-aderente em lume médio e verter pequenas porções do preparado.",
+                "Cozinhar durante 30 segundos a 1 minuto de cada lado e repetir o processo com a restante massa.",
+                "Servir com os toppings a gosto."
+            ]
+        },
+        {
+            "name": "Folhado de Atum",
+            "description": "Uma receita rápida e simples de preparar, mas com uma excelente apresentação. Experimente esta deliciosa trança de massa folhada de atum.",
+            "image_url": "https://feed.continente.pt/media/4fap05di/folhado-atum.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133782078293970000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 2,
+                    "product": "azeite",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "cebola roxa",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "lata de atum",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "polpa de tomate",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "alcaparras",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "massa folhada",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "manjericão",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Numa frigideira com um fio de azeite, salteie a cebola roxa cortada em rodelas finas por cerca de 3 minutos ou até começar a ficar tenra.",
+                "Junte o atum escorrido e a polpa de tomate e deixe cozinhar por cerca de 5 minutos em lume médio. Acrescente as alcaparras e cozinhe por mais 2 minutos.",
+                "Estenda a massa folhada numa superfície lisa. Divida-a em três partes, sem fazer os cortes até ao fim. Recheie a parte do meio com o preparado de atum, disponha por cima o queijo mozarela cortado em fatias finas e polvilhe com manjericão.",
+                "Nas outras divisões faça pequenos golpes, formando tiras na diagonal. Entrelace as tiras de modo a cobrir o recheio e entrançar a empada.",
+                "Pincele com o ovo batido e leve ao forno a 200ºC até ficar dourada."
+            ]
+        },
+        {
+            "name": "Sopa Verde",
+            "description": "Gosta de sopas nutritivas e reconfortantes? Experimente esta sopa verde cheia de sabor!",
+            "image_url": "https://feed.continente.pt/media/dvkn0yy2/sopa-verde.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133846110700270000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 1,
+                    "product": "azeite",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "cebola",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "alho-francês",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "dentes de alho",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "brócolos",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "caldo de legumes",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 100,
+                    "product": "espinafres",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "sal",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "pimenta",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "sementes de girassol",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "sementes de abóbora",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Corte os brócolos em floretes e lave-os bem. Reserve.",
+                "Numa panela grande, aqueça um fio de azeite e refogue a cebola picada finamente, o alho-francês cortado às rodelas e os dentes de alho picados.",
+                "Quando a cebola estiver bem tenra, adicione os brócolos e o caldo de legumes.",
+                "Assim que os brócolos estiverem tenros, junte os espinafres e deixe ferver por mais minutos. Triture até obter um creme suave. Tempere com sal e pimenta.",
+                "Sirva a sopa polvilhada com sementes de girassol e sementes de abóbora."
+            ]
+        },
+        {
+            "name": "Sopa de Ervilhas e Cenoura",
+            "description": "Saiba como fazer uma receita saciante e económica de sopa ou creme de ervilhas com cenoura.",
+            "image_url": "https://feed.continente.pt/media/u2ilppth/sopa-ervilhas-cenoura.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133782089115100000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 1,
+                    "product": "azeite",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "cebola",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "dente de alho",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "hortelã",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 300,
+                    "product": "ervilhas",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 150,
+                    "product": "batatas",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "sal",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "água",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "cenoura",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "coentros",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 50,
+                    "product": "amêndoa",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Numa panela coloque o azeite a cobrir o fundo e deixe aquecer. Adicione a cebola, o alho e a hortelã. Deixe refogar.",
+                "Junte as ervilhas e as batatas cortadas em pedaços pequenos. Tempere com sal, adicione a água e deixe cozer.",
+                "Quando os legumes estiverem cozidos, triture a sopa e deixe em lume brando. Retifique os temperos e adicione mais água, se necessário.",
+                "Adicione a cenoura ralada ou cortada em cubinhos pequenos e deixe cozinhar durante mais 5 minutos.",
+                "Sirva a sopa de ervilhas e polvilhe com coentros picados e amêndoa tostada picada."
+            ]
+        },
+        {
+            "name": "Batido de Banana",
+            "description": "O smoothie de banana é uma bebida simples, nutritiva e irresistivelmente cremosa, perfeita para começar o dia com energia ou para um lanche saudável.",
+            "image_url": "https://feed.continente.pt/media/jfwhqxs5/smoothie-de-banana.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133820382374630000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 1,
+                    "product": "bebida vegetal de amêndoa",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "banana",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 4,
+                    "product": "gelo",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "flocos de aveia",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "manteiga de amêndoa",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "canela",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Colocar todos os ingredientes numa liquidificadora e triturar até obter um batido homogéneo.",
+                "Servir bem frio e polvilhar com canela."
+            ]
+        },
+        {
+            "name": "Arroz de Sarrabulho",
+            "description": "Um prato típico do Minho, cheio de tradição e sabor! Este arroz cremoso, feito com carne de porco, sangue e especiarias, é uma verdadeira iguaria para os amantes da cozinha portuguesa.",
+            "image_url": "https://feed.continente.pt/media/42tmi0y5/arroz-de-sarrabulho.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133838502611900000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 100,
+                    "product": "carne de vaca",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 150,
+                    "product": "galinha",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "osso da suã",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "costeleta de porco",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "coração de porco",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 75,
+                    "product": "bofe de porco",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 50,
+                    "product": "chouriço de carne",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "água",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "sal",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 3,
+                    "product": "cravinhos",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "noz-moscada",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "pimenta preta",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "louro",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "azeite",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "cebola",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 3,
+                    "product": "alho",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 300,
+                    "product": "arroz carolino",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 150,
+                    "product": "sangue de porco",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "vinagre",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "cominhos",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Colocar as carnes num tacho juntamente com a água fria, o sal, os cravinhos, a noz-moscada, a pimenta preta e as folhas de louro e deixar cozinhar em lume médio/baixo.",
+                "Ir retirando a espuma que se forma na superfície da água e assim que as carnes estiverem bem cozidas, retirar do tacho, reservando a água.",
+                "Deixar arrefecer as carnes e cortar em pedaços pequenos.",
+                "Colocar o azeite num tacho, juntamente com a cebola e os alhos picados e refogar.",
+                "Adicionar o arroz e deixar fritar um pouco.",
+                "Acrescentar a água de cozedura das carnes (3 vezes o volume do arroz) e envolver.",
+                "Deixar cozinhar em lume médio/baixo, mexendo de vez em quando.",
+                "Misturar o sangue com o vinagre para não coagular.",
+                "Quando o arroz estiver quase totalmente cozido, juntar as carnes desfiadas e o sangue. Envolver e deixar levantar fervura.",
+                "Acrescentar os cominhos em pó e servir de imediato."
+            ]
+        },
+        {
+            "name": "Croquetes de Carne",
+            "description": "Siga a nossa sugestão de croquetes de carne e chouriço. O chouriço traz um toque especial à receita.",
+            "image_url": "https://feed.continente.pt/media/ojxhhnww/croquetes-de-carne-e-chourico.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133866777923370000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 1,
+                    "product": "azeite",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "dentes de alho",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "folha de louro",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 80,
+                    "product": "chouriço",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 400,
+                    "product": "carne picada",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "salsa",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "cebola",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "manteiga",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 80,
+                    "product": "farinha",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 200,
+                    "product": "leite magro",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "sumo limão",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "sal",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "pimenta",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "pão ralado",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Aqueça um fio de azeite numa frigideira e refogue os dentes de alho picados juntamente com o louro e o chouriço por cerca de 2 minutos.",
+                "Junte a carne picada e frite-a até ficar bem corada, mexendo de vez em quando.",
+                "Retire a folha de louro e acrescente um pouco de salsa picada.",
+                "Coloque um fio de azeite num tacho e refogue a cebola picada finamente. Junte a farinha e mexa bem.",
+                "Vá adicionando o leite lentamente, até engrossar, e depois acrescente o sumo de limão e tempere com o sal e a pimenta.",
+                "Junte o preparado da carne e deixe cozinhar, mexendo bem, até este descolar do tacho. Retire do lume e deixe arrefecer.",
+                "Molde os croquetes com as mãos usando pão ralado. Disponha num tabuleiro forrado com papel vegetal e leve ao forno a 180ºC por 15 a 20 minutos.",
+                "Sirva os croquetes de carne e chouriço e acompanhe com molho de iogurte e ketchup."
+            ]
+        },
+        {
+            "name": "Marinada para Frango",
+            "description": "Esta receita utiliza uma marinada simples, mas saborosa, que fará toda a diferença na sua refeição!",
+            "image_url": "https://feed.continente.pt/media/okth4rj4/marinada-para-frango.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133852142132300000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 0.5,
+                    "product": "azeite",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "vinagre balsâmico",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "molho de soja",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "molho inglês",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "sumo limão",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "frango",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "alecrim",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "mostarda Dijon",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Colocar todos os ingredientes numa taça e misturar muito bem.",
+                "Temperar o frango com sal e pimenta e temperar com a marinada. Reservar um pouco para pincelar o frango enquanto está a assar no forno."
+            ]
+        },
+        {
+            "name": "Secretos de Porco Preto",
+            "description": "Uma carne com muito sabor e de qualidade única e ideal para acompanhar com uma saladinha e palitos de Batata-Doce.",
+            "image_url": "https://feed.continente.pt/media/1j2oi0ig/secretos-porco-preto.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133854666660300000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 300,
+                    "product": "secretos de porco",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "sal",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "azeite",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "pimenta",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "batata doce",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Tempere os secretos de porco ibérico com sal e pimenta.",
+                "Coloque uma frigideira em lume forte com um fio de azeite e core bem a carne de ambos os lados, até ficar bem tostada.",
+                "Sirva os secretos de porco ibérico com palitos de batata doce assadas no forno."
+            ]
+        },
+        {
+            "name": "Pizza com Burrata e Pesto",
+            "description": "Aprenda esta receita rápida de Pizza Vegetariana com Burrata e Pesto.",
+            "image_url": "https://feed.continente.pt/media/qqcgxmmi/pizza-vegetariana.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133872795167030000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 30,
+                    "product": "queijo",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 25,
+                    "product": "manjericão",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 20,
+                    "product": "amêndoa",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "dente de alho",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "massa para pizza",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 3,
+                    "product": "molho de tomate",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "queijos burrata",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Para o pesto: Parta o queijo em pedaços pequenos. Coloque todos os ingredientes num copo de varinha mágica e triture bem até ficar homogéneo. Reserve.",
+                "Para a pizza: Coloque a massa com o papel vegetal num tabuleiro.",
+                "Verta o molho de tomate no centro e espalhe-o por toda a superfície com a parte de trás de uma colher.",
+                "Espalhe também as burratas cortadas em pedaços grandes. Leve ao forno pré-aquecido a 220ºC por cerca de 10 a 12 minutos, até a pizza ficar bem dourada.",
+                "Retire do forno e salpique com o pesto.",
+                "Decore com folhas de manjericão inteiras e sirva de imediato."
+            ]
+        },
+        {
+            "name": "Maminha Grelhada",
+            "description": "Delicie-se com a Maminha Grelhada e sua Salada Vibrante - a suculência da carne, a frescura da rúcula e a doçura cítrica da laranja numa combinação irresistível.",
+            "image_url": "https://feed.continente.pt/media/j3xl4dbe/maminha-grelhada.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133866755218870000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 1,
+                    "product": "maminha",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "sal",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 200,
+                    "product": "rúcula",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "laranja",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 100,
+                    "product": "rabanete",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "azeite",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Tempere a carne com sal por todos os lados e coloque-a numa grelha bem quente.",
+                "Quando a carne se soltar da grelha, vire-a e deixe grelhar até atingir o ponto desejado. Reserve.",
+                "Coloque numa saladeira a rúcula, as laranjas em gomos e os rabanetes em rodelas finas.",
+                "Tempere com flor de sal e azeite e envolva.",
+                "Sirva a carne fatiada com a salada."
+            ]
+        },
+        {
+            "name": "Bolo de Laranja Equilibrado",
+            "description": "Fofinho, aromático e equilibrado, este bolo de laranja saudável é a opção perfeita para um doce sem culpa. Feito com ingredientes mais leves, mas sem perder o sabor!",
+            "image_url": "https://feed.continente.pt/media/4sip3vl4/bolo-de-laranja-saudavel.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133872805458170000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 4,
+                    "product": "ovo",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "mel",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 160,
+                    "product": "farinha de aveia",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "fermento",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "laranja",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 4,
+                    "product": "claras",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "sumo laranjas",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Misture as gemas com o sumo de laranja e o mel.",
+                "À parte, misture a farinha de aveia com fermento em pó e a raspa de laranja.",
+                "Junte à mistura das gemas e misture bem.",
+                "Envolva as claras em castelo delicadamente até ficar homogêneo.",
+                "Verter numa forma previamente untada e levar ao forno a 180ºC por 20 a 30 minutos.",
+                "Servir o bolo de laranja e decorar com raspa de laranja."
+            ]
+        },
+        {
+            "name": "Sopa de Couve-Coração",
+            "description": "A Sopa de Couve-Coração é um prato leve, saboroso e nutritivo, perfeito para os dias frios. Rica em vitaminas e minerais, esta sopa é ideal para uma refeição rápida e saudável.",
+            "image_url": "https://feed.continente.pt/media/i3wncfd0/sopa-de-couve-coracao.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133872777657770000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 2,
+                    "product": "azeite",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "cebola",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "cenoura",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "alho francês",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 2,
+                    "product": "batata",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "couve coração",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 1,
+                    "product": "sal",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "pimenta",
+                    "image_url": ""
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "água",
+                    "image_url": ""
+                }
+            ],
+            "instructions": [
+                "Lave e corte os vegetais em pedaços.",
+                "Verta um fio de azeite numa panela e refogue a cebola, a cenoura e o alho francês.",
+                "Quando dourarem, adicione as batatas e a couve coração.",
+                "Cubra com água e, quando começar a ferver, reduza para lume médio/baixo.",
+                "Quando terminar a cozedura, desfaça os vegetais com a varinha mágica e sirva. Decore com pimenta a gosto."
+            ]
+        },
+        {
+            "name": "Salada Fria",
+            "description": "A salada fria é uma opção leve, prática e versátil, perfeita para os dias mais quentes ou para quem procura uma refeição rápida e refrescante.",
+            "image_url": "https://feed.continente.pt/media/izabowdu/salada-fria.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133800316881730000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 250,
+                    "product": "massa em laços"
+                },
+                {
+                    "quantity": 1,
+                    "product": "queijo mozzarella"
+                },
+                {
+                    "quantity": 1,
+                    "product": "cenoura"
+                },
+                {
+                    "quantity": 1,
+                    "product": "ervilhas cozidas"
+                },
+                {
+                    "quantity": 4,
+                    "product": "vinagre"
+                },
+                {
+                    "quantity": 8,
+                    "product": "azeite"
+                }
+            ],
+            "instructions": [
+                "Coza a massa conforme as instruções da embalagem.",
+                "Numa tigela, misture a massa, o queijo, a cenoura e as ervilhas.",
+                "Noutra tigela, misture com a ajuda de um batedor de varas o vinagre, a mostarda e as ervas. Acrescente o azeite em fio, até a mistura ficar bem emulsionada. Tempere de sal e pimenta.",
+                "Regue a massa com esta mistura, envolva bem e sirva de imediato."
+            ]
+        },
+        {
+            "name": "Patê de Requeijão e Ervas",
+            "description": "O Patê de Requeijão e Ervas é simples, delicioso e ao mesmo tempo refrescante. Esta é uma receita que combina bem com pão seco torrado. Siga o passo-a-passo e desfrute.",
+            "image_url": "https://feed.continente.pt/media/14tdhn3a/pate-requeijao-ervas.jpg?anchor=center&mode=crop&width=1023&height=768&rnd=133827942362770000&format=webp",
+            "ingredients": [
+                {
+                    "quantity": 1,
+                    "product": "dente alho"
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "manjericão"
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "salsa"
+                },
+                {
+                    "quantity": 2,
+                    "product": "requejão"
+                },
+                {
+                    "quantity": 80,
+                    "product": "leite"
+                },
+                {
+                    "quantity": 1,
+                    "product": "sal"
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "pimenta"
+                },
+                {
+                    "quantity": 0.5,
+                    "product": "tostas"
+                }
+            ],
+            "instructions": [
+                "Coloque o dente de alho juntamente com as ervas num processador de alimentos e pique bem.",
+                "Junte o requeijão e o leite, tempere com sal e pimenta e pique novamente até ficar homogéneo.",
+                "Acompanhe o patê de requeijão e ervas com tostas."
+            ]
+        }
+    ]
+}

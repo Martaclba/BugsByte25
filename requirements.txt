@@ -11,6 +11,7 @@ Flask-RESTful==0.3.10
 idna==3.10
 itsdangerous==2.2.0
 Jinja2==3.1.6
+joblib==1.4.2
 MarkupSafe==3.0.2
 numpy==2.2.4
 packaging==24.2
@@ -23,10 +24,13 @@ python-dateutil==2.9.0.post0
 pytz==2025.2
 regex==2024.11.6
 requests==2.32.3
+scikit-learn==1.6.1
+scipy==1.15.2
 setuptools==78.1.0
 singlestoredb==1.12.2
 six==1.17.0
 sqlparams==6.2.0
+threadpoolctl==3.6.0
 tzdata==2025.2
 urllib3==2.3.0
 Werkzeug==3.1.3
