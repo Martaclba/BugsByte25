@@ -68,7 +68,6 @@ cd backend
 
 API available at: http://localhost:8000
 
-------
 
 ## Frontend
 
