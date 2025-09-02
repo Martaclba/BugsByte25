@@ -1,13 +1,15 @@
 import singlestoredb as s2
+from dotenv import load_dotenv
+import os
 
-# DB_NAME = "db_marta_abaa0"
-# SINGLESTOREDB_URL = "marta-1dc51:BmIJ7OrbDUA0agVkgXo0ofm34lQzIcWs@svc-3482219c-a389-4079-b18b-d50662524e8a-shared-dml.aws-virginia-6.svc.singlestore.com:3333/db_marta_abaa0"
+load_dotenv()
 
-DB_NAME = "db_jorge_dc4ac"
-SINGLESTOREDB_URL = "jorge-45214:MQ2ASEdSu3amqhSxt27AznS3Z6f5Dxru@svc-3482219c-a389-4079-b18b-d50662524e8a-shared-dml.aws-virginia-6.svc.singlestore.com:3333/db_jorge_dc4ac"
+db_name = os.getenv("DB_NAME")
+db_url = os.getenv("SINGLESTOREDB_URL")
+
 
 def connect_db():
-    conn = s2.connect(SINGLESTOREDB_URL)
+    conn = s2.connect(db_url)
     return conn
 
 def clean_db(conn):
@@ -15,27 +17,27 @@ def clean_db(conn):
         cur.execute("DROP TABLE IF EXISTS users")
         print("Deleted users table")
 
-        # cur.execute("DROP TABLE IF EXISTS bundles")
-        # print("Deleted bundles table")
+        cur.execute("DROP TABLE IF EXISTS bundles")
+        print("Deleted bundles table")
 
-        # cur.execute("DROP TABLE IF EXISTS bundle_items")
-        # print("Deleted bundle_items table")
+        cur.execute("DROP TABLE IF EXISTS bundle_items")
+        print("Deleted bundle_items table")
 
-        # cur.execute("DROP TABLE IF EXISTS items")
-        # print("Deleted items table")
+        cur.execute("DROP TABLE IF EXISTS items")
+        print("Deleted items table")
 
         ##### Drop vector tables #####
 
-        # cur.execute("DROP TABLE IF EXISTS bundles_vectors")
-        # print("Deleted bundles_vectors table")
+        cur.execute("DROP TABLE IF EXISTS bundles_vectors")
+        print("Deleted bundles_vectors table")
 
-        # cur.execute("DROP TABLE IF EXISTS users_vectors")
-        # print("Deleted users_vectors table")
+        cur.execute("DROP TABLE IF EXISTS users_vectors")
+        print("Deleted users_vectors table")
 
-        # print("Deleted normalize function")
-        # cur.execute("DROP FUNCTION IF EXISTS normalize")
+        print("Deleted normalize function")
+        cur.execute("DROP FUNCTION IF EXISTS normalize")
 
-        # pass
+        pass
         
         
 
@@ -44,7 +46,7 @@ def setup_db(conn, cleanup=False):
         clean_db(conn)
         
     with conn.cursor() as cur:
-        cur.execute('USE %s' % DB_NAME)
+        cur.execute('USE %s' % db_name)
 
         # Create users table
         cur.execute("""
